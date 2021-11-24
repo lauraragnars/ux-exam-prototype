@@ -2,6 +2,6 @@
 
 ## Setup
 
-1. `npm install`
-2. `npm start`
+1. `cd src`
+2. `sass --watch sass/main.scss styles.css`
 
