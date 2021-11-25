@@ -33,7 +33,6 @@ function start(){
 }
 
 function toggleMenu(){
-    console.log("togggle")
     const menu = document.querySelector(".menu_container")
 
     if (menu.classList.contains("show")){
