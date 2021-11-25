@@ -1,0 +1,38 @@
+#messages {
+  overflow: hidden;
+  .content {
+    display: flex;
+    flex-wrap: wrap;
+
+    .column_narrow {
+      //   border: 1px solid black;
+      flex-grow: 2;
+      flex-basis: 200px;
+    }
+    .column_wide {
+      border: 1px solid black;
+      flex-grow: 3;
+      flex-basis: 600px;
+    }
+
+    .user_image {
+      width: 20%;
+      margin-right: 10px;
+    }
+
+    .messagelist {
+    }
+
+    .message_wrapper {
+      display: flex;
+      align-items: center;
+      border: 1px solid black;
+      height: 13.5vh;
+      width: 100%;
+      padding: 10px;
+    }
+
+    .user_image {
+    }
+  }
+}
