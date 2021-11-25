@@ -1,16 +1,50 @@
 "use strict"
 
-const menuContainer = document.querySelector(".menu")
+window.addEventListener("DOMContentLoaded", start)
 
-const menu = `<div class="menu_top">LOGO</div>
-<ul class="menuitems">
-  <li class="menuitem"><a href="dashboard.html">Dashboard</a></li>
-  <li class="menuitem"><a href="plans.html">Plans</a></li>
-  <li class="menuitem"><a href="calendar.html">Calendar</a></li>
-  <li class="menuitem"><a href="courses.html">Courses</a></li>
-  <li class="menuitem"><a href="announcements.html">Announcements</a></li>
-  <li class="menuitem"><a href="messages.html">Messages</a></li>
-</ul>
-<div class="menu_bottom"></div>`
+function start(){
+    const menuContainer = document.querySelector(".container")
 
-menuContainer.insertAdjacentHTML('afterbegin', menu)
+    const menu = `
+    <p class="toggle-menu">☰</p>
+    <div class="menu_container hide">
+        <nav class="menu">
+            <div class="menu_top">
+                <img src="./assets/icons/logo.svg" alt="Icon">
+            </div>
+            <ul class="menuitems">
+            <li class="selected"><img src="./assets/icons/filled/home.svg" alt="Icon"><a href="dashboard.html">Dashboard</a></li>
+            <li><img src="./assets/icons/outline/chart.svg" alt="Icon"><a href="plans.html">Plans</a></li>
+            <li><img src="./assets/icons/outline/calendar.svg" alt="Icon"><a href="calendar.html">Calendar</a></li>
+            <li><img src="./assets/icons/outline/category.svg" alt="Icon"><a href="courses.html">Courses</a></li>
+            <li><img src="./assets/icons/outline/infosquare.svg" alt="Icon"><a href="announcements.html">Announcements</a></li>
+            <li><img src="./assets/icons/outline/paper.svg" alt="Icon"><a href="messages.html">Messages</a></li>
+            </ul>
+            <div class="menu_bottom">
+                <img src="./assets/icons/outline/logout.svg" alt="Icon">
+                <a href="index.html">Logout</a>
+            </div>
+        </nav>
+    </div>`
+    
+    menuContainer.insertAdjacentHTML('afterbegin', menu)
+
+    document.querySelector(".toggle-menu").addEventListener("click", toggleMenu)
+}
+
+function toggleMenu(){
+    console.log("togggle")
+    const menu = document.querySelector(".menu_container")
+
+    if (menu.classList.contains("show")){
+        this.textContent = "☰"
+        menu.classList.add("hide")
+        menu.classList.remove("show")
+    } else {
+        this.textContent = "X"
+        menu.classList.remove("hide")
+        menu.classList.add("show")
+    }
+}
+
+

@@ -1,28 +1,138 @@
+@import '../base/variables';
 //General layout for all the pages
 
-.container {
+.hide {
+  transition: 0.3s;
+  opacity: 0;
+  visibility: hidden;
+  pointer-events: none;
+
+  @media (min-width: 900px){
+    opacity: 1;
+    visibility: visible;
+    pointer-events: all;
+  }
+}
+
+.show {
+  visibility: visible;
+  opacity: 1;
+  transition: 0.3s;
+}
+
+.toggle-menu {
+  position: fixed;
+  color: rebeccapurple;
+  transition: 0.3s;
+  top: 2rem;
+  right: 2rem;
+  z-index: 1000;
+  height: 3rem;
+  width: 3rem;
+  font-size: 1.8rem;
+  text-align: center;
   display: flex;
-  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+  color: $color-off-white;
+  background-color: $color-main;
+  border-radius: 50%;
+
+  @media (min-width: 900px){
+    display: none;
+  }
+}
+
+.container {
+
+  @media (min-width: 900px){
+    display: flex;
+    flex-wrap: wrap;
+  }
 
   .menu {
-    height: 90vh;
+    height: 100%;
+    padding: 2rem;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
+    background-color: $color-off-white;
+    box-shadow: $box-shadow;
+    align-items: center;
+
+    .menu_bottom {
+      display: flex;
+      gap: 1rem;
+      align-items: center;
+
+      a {
+        text-decoration: none;
+        font-family: $font-family;
+        color: $color-text-purple;
+      }
+    }
+
+    .menu_top {
+      text-align: center;
+      margin-top: 2rem;
+      img {
+        width: 40%;
+      }
+    }
+
+    .menuitems {
+      img {
+        width: auto;
+      }
+
+      .selected {
+        background-color: $color-main-tint;
+        border-radius: $border-radius;
+
+        a {
+          color: $color-main;
+        }
+      }
+      
+      
+
+      li {
+        display: flex;
+        gap: 1rem;
+        align-items: center;
+        padding: 1.7rem 1.5rem;
+        font-size: 1.1rem;
+
+
+        a {
+          text-decoration: none;
+          font-family: $font-family;
+          color: $color-gray;
+          transition: 0.3s;
+
+          &:hover {
+            color: $color-main;
+          }
+        }
+      }
+    }
   }
   .menu_container {
     width: 100%;
     height: 100vh;
-    flex-grow: 1;
-    flex-basis: 200px;
-    border: 1px solid black;
+    position: fixed;
+   
+    @media (min-width: 900px){
+      flex-grow: 1;
+      flex-basis: 200px;  
+      position: relative;
+    }
   }
   .content_container {
     width: 100%;
     height: 100vh;
     flex-grow: 6;
     flex-basis: 600px;
-    border: 1px solid black;
 
     .top_navbar {
       width: 100%;
