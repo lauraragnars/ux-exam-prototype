@@ -3,4 +3,6 @@ dist
 .parcel-cache
 .cache
 styles.css.map
-styles.css 
+styles.css
+src/styles.css.map
+src/styles.css
