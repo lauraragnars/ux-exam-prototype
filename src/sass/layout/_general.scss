@@ -95,7 +95,13 @@
         }
       }
       
-      
+      :not(.selected){
+        transition: 0.3s;
+        &:hover {
+          background-color: $color-main-tint;
+          border-radius: $border-radius;
+        }
+      }
 
       li {
         display: flex;
@@ -103,6 +109,7 @@
         align-items: center;
         padding: 1.7rem 1.5rem;
         font-size: 1.1rem;
+        margin: 0.5rem 0;
 
 
         a {
