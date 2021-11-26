@@ -1,0 +1,282 @@
+@import url("https://fonts.googleapis.com/css2?family=Outfit:wght@100;200;300;400;500;600;700;800;900&display=swap");
+* {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
+}
+
+img {
+  width: 100%;
+}
+
+body {
+  line-height: 1;
+}
+
+ol, ul {
+  list-style: none;
+}
+
+blockquote, q {
+  quotes: none;
+}
+
+blockquote:before, blockquote:after,
+q:before, q:after {
+  content: '';
+  content: none;
+}
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+h1 {
+  font-family: "Outfit", sans-serif;
+  font-weight: 800;
+  font-size: 5rem;
+}
+
+h2 {
+  font-family: "Outfit", sans-serif;
+  font-weight: 800;
+  font-size: 3rem;
+}
+
+h3 {
+  font-family: "Outfit", sans-serif;
+  font-weight: 400;
+  font-size: 3rem;
+}
+
+.hide {
+  -webkit-transition: 0.3s;
+  transition: 0.3s;
+  opacity: 0;
+  visibility: hidden;
+  pointer-events: none;
+}
+
+@media (min-width: 900px) {
+  .hide {
+    opacity: 1;
+    visibility: visible;
+    pointer-events: all;
+  }
+}
+
+.show {
+  visibility: visible;
+  opacity: 1;
+  -webkit-transition: 0.3s;
+  transition: 0.3s;
+}
+
+.toggle-menu {
+  position: fixed;
+  color: rebeccapurple;
+  -webkit-transition: 0.3s;
+  transition: 0.3s;
+  top: 2rem;
+  left: 2rem;
+  z-index: 1000;
+  height: 3rem;
+  width: 3rem;
+  font-size: 1.8rem;
+  text-align: center;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  color: #FEFEFE;
+  background-color: #712AFC;
+  border-radius: 50%;
+  font-family: "Outfit", sans-serif;
+}
+
+@media (min-width: 900px) {
+  .toggle-menu {
+    display: none;
+  }
+}
+
+@media (min-width: 900px) {
+  .container {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+  }
+}
+
+.container .menu {
+  height: 100%;
+  padding: 2rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  background-color: #FEFEFE;
+  -webkit-box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+          box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.container .menu .menu_bottom {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  gap: 1rem;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.container .menu .menu_bottom a {
+  text-decoration: none;
+  font-family: "Outfit", sans-serif;
+  color: #221144;
+}
+
+.container .menu .menu_top {
+  text-align: center;
+  margin-top: 2rem;
+}
+
+.container .menu .menu_top img {
+  width: 40%;
+}
+
+.container .menu .menuitems img {
+  width: auto;
+}
+
+.container .menu .menuitems .selected {
+  background-color: #F7F3FF;
+  border-radius: 20px;
+}
+
+.container .menu .menuitems .selected a {
+  color: #712AFC;
+}
+
+.container .menu .menuitems :not(.selected) {
+  -webkit-transition: 0.3s;
+  transition: 0.3s;
+}
+
+.container .menu .menuitems :not(.selected):hover {
+  background-color: #F7F3FF;
+  border-radius: 20px;
+}
+
+.container .menu .menuitems li {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  gap: 1rem;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  padding: 1.7rem 1.5rem;
+  font-size: 1.1rem;
+  margin: 0.5rem 0;
+}
+
+.container .menu .menuitems li a {
+  text-decoration: none;
+  font-family: "Outfit", sans-serif;
+  color: #969696;
+  -webkit-transition: 0.3s;
+  transition: 0.3s;
+}
+
+.container .menu .menuitems li a:hover {
+  color: #712AFC;
+}
+
+.container .menu_container {
+  width: 100%;
+  height: 100vh;
+  position: fixed;
+}
+
+@media (min-width: 900px) {
+  .container .menu_container {
+    -webkit-box-flex: 1;
+        -ms-flex-positive: 1;
+            flex-grow: 1;
+    -ms-flex-preferred-size: 200px;
+        flex-basis: 200px;
+    position: relative;
+  }
+}
+
+.container .content_container {
+  width: 100%;
+  height: 100vh;
+  -webkit-box-flex: 6;
+      -ms-flex-positive: 6;
+          flex-grow: 6;
+  -ms-flex-preferred-size: 600px;
+      flex-basis: 600px;
+}
+
+.container .content_container .top_navbar {
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: end;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  height: 10vh;
+  padding: 20px;
+  padding-right: 2rem;
+  gap: 1rem;
+}
+
+.container .content_container .top_navbar .bell {
+  width: 2rem;
+}
+
+.container .content_container .top_navbar .photo {
+  width: 3rem;
+}
+
+.container .content_container .top_navbar p {
+  font-family: "Outfit", sans-serif;
+  font-weight: 600;
+}
+
+.container .content_container .top_navbar a {
+  margin-left: 10px;
+}
+
+#dashboard {
+  display: block;
+}
+/*# sourceMappingURL=main.css.map */
