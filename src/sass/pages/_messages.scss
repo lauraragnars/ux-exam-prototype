@@ -1,38 +1,127 @@
 #messages {
+  img {
+    width: 100%;
+  }
   overflow: hidden;
   .content {
     display: flex;
     flex-wrap: wrap;
 
+    //Messagelist on left hand side start
+
     .column_narrow {
       //   border: 1px solid black;
       flex-grow: 2;
       flex-basis: 200px;
+
+      .user_image {
+        width: 20%;
+        margin-right: 10px;
+      }
+
+      .messagelist {
+        border-right: 1px solid $color-main-tint !important;
+        padding-right: 10px;
+      }
+      .test {
+        width: 100%;
+      }
+
+      .message_wrapper {
+        display: flex;
+        align-items: center;
+
+        height: 13.5vh;
+        width: 100%;
+        padding: 10px;
+        border-radius: 10px;
+      }
+
+      .message_wrapper:nth-child(1) {
+        justify-content: space-between;
+        align-items: center;
+      }
+
+      .message_date {
+        font-size: 10px;
+        margin-bottom: 3px;
+      }
+      .message_wrapper:nth-child(2) {
+        background-color: $color-main-tint;
+      }
+      .message_wrapper:nth-child(3) h4,
+      .message_wrapper:nth-child(3) p {
+        font-weight: 400;
+      }
+
+      .message_excerpt {
+        margin-top: 3px;
+      }
+      .purple_circle {
+        width: 9px;
+        height: 9px;
+        border-radius: 50%;
+        background-color: $color-purple;
+      }
     }
+
+    //Messagelist on left hand side end
+
+    //Open chat (on right side) start
     .column_wide {
-      border: 1px solid black;
+      //   border: 1px solid black;
       flex-grow: 3;
       flex-basis: 600px;
-    }
 
-    .user_image {
-      width: 20%;
-      margin-right: 10px;
-    }
+      .chat_wrapper {
+        display: flex;
+      }
+      .sender_messages,
+      .recipient_messages {
+        border: 1px solid black;
+      }
 
-    .messagelist {
-    }
+      .sender_messages {
+        width: 50%;
+      }
 
-    .message_wrapper {
-      display: flex;
-      align-items: center;
-      border: 1px solid black;
-      height: 13.5vh;
-      width: 100%;
-      padding: 10px;
-    }
+      .recipient_messages {
+        display: flex;
+        justify-content: end;
+        width: 50%;
+      }
 
-    .user_image {
+      .sender_message,
+      .recipient_message {
+        display: flex;
+      }
+      .sender_image {
+        width: 30%;
+      }
+      .messagebubble1 {
+        width: 300px;
+        height: 100px;
+        background-color: $color-purple-tint;
+        border-radius: 10px;
+      }
+      .messagebubble2 {
+        width: 300px;
+        height: 100px;
+        background-color: $color-purple;
+        border-radius: 10px;
+      }
+
+      .chat_header {
+        display: flex;
+        align-items: center;
+        padding: 10px;
+        border: 1px solid black;
+
+        img {
+          width: 10%;
+          margin-right: 10px;
+        }
+      }
     }
   }
 }
