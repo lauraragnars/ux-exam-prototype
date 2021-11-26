@@ -25,7 +25,7 @@
   color: rebeccapurple;
   transition: 0.3s;
   top: 2rem;
-  right: 2rem;
+  left: 2rem;
   z-index: 1000;
   height: 3rem;
   width: 3rem;
@@ -37,6 +37,7 @@
   color: $color-off-white;
   background-color: $color-main;
   border-radius: 50%;
+  font-family: $font-family;
 
   @media (min-width: 900px){
     display: none;
@@ -141,7 +142,22 @@
       align-items: center;
       height: 10vh;
       padding: 20px;
-      border: 1px solid black;
+      padding-right: 2rem;
+      gap: 1rem;
+
+
+      .bell {
+        width: 2rem;
+      }
+
+      .photo {
+        width: 3rem;
+      }
+
+      p {
+        font-family: $font-family;
+        font-weight: 600;
+      }
 
       a {
         margin-left: 10px;
