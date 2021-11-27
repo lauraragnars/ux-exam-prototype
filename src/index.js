@@ -26,8 +26,6 @@ function start(){
             </div>
         </nav>
     </div>`
-
-    // const topBar = ``
     
     menuContainer.insertAdjacentHTML('afterbegin', menu)
 

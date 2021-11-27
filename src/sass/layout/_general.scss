@@ -22,7 +22,6 @@
 
 .toggle-menu {
   position: fixed;
-  color: rebeccapurple;
   transition: 0.3s;
   top: 2rem;
   left: 2rem;
@@ -111,16 +110,17 @@
         font-size: 1.1rem;
         margin: 0.5rem 0;
 
+        &:hover {
+          a {
+            color: $color-main;
+          }
+        }
 
         a {
           text-decoration: none;
           font-family: $font-family;
           color: $color-gray;
           transition: 0.3s;
-
-          &:hover {
-            color: $color-main;
-          }
         }
       }
     }
