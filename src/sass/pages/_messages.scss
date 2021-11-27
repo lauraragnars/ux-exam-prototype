@@ -10,16 +10,14 @@
       //   border: 1px solid black;
       flex-grow: 2;
       flex-basis: 200px;
+      border-right: 1px solid $color-main-tint !important;
+      padding-right: 10px;
 
       .user_image {
         width: 20%;
         margin-right: 10px;
       }
 
-      .messagelist {
-        border-right: 1px solid $color-main-tint !important;
-        padding-right: 10px;
-      }
       .test {
         width: 100%;
       }
@@ -72,10 +70,11 @@
 
       .chat_wrapper {
         display: flex;
+        flex-wrap: wrap;
       }
       .sender_messages,
       .recipient_messages {
-        border: 1px solid black;
+        // border: 1px solid black;
       }
 
       .sender_messages {
@@ -86,11 +85,12 @@
         display: flex;
         justify-content: end;
         width: 50%;
+        flex-direction: column;
       }
 
       .sender_message,
       .recipient_message {
-        display: flex;
+        margin: 10px;
       }
       .sender_image {
         width: 30%;
@@ -99,6 +99,13 @@
         width: 300px;
         height: 100px;
         background-color: $color-purple-tint;
+        border-radius: 10px;
+      }
+
+      .filler {
+        width: 300px;
+        height: 100px;
+        background-color: $color-off-white;
         border-radius: 10px;
       }
       .messagebubble2 {
