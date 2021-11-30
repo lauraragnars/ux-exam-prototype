@@ -1,1 +1,56 @@
 @import '../base/variables';
+
+// All courses page
+.coursesContainer{
+    display: grid;
+    grid-template-columns: 1.5fr 1fr;
+    gap: 5em;
+  justify-content: space-between;
+}
+.courses{
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-between;
+    gap: 1em;
+ }
+.course{
+    height: 120px;
+    width: 120px;
+    background-color: $color-purple-tint;
+    border-radius: $border-radius;
+    box-shadow: $box-shadow;
+    display: table;
+    text-align: center; 
+    margin: 0 auto;
+    cursor: pointer;
+    a{
+        text-decoration: none;
+    }
+    h3{
+        color: black;
+        height: 120px;
+        font-size: 1.3em;
+        text-align: center;
+        margin: 0 auto;
+        display: table-cell;
+        vertical-align: middle;
+    }
+    transition: 0.3s;
+    &:hover{
+        font-size: 1.05em;
+        color:pink;
+    }
+}
+
+.tasks{
+    margin-right: 2em;
+    width: 400px;
+    border-radius: $border-radius;
+    box-shadow: $box-shadow;
+    display: flex;
+    float: right;
+    .task{
+        display: flex;
+        flex-flow: row;
+    }
+}
