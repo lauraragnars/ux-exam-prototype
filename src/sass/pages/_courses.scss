@@ -45,6 +45,7 @@
 .tasks{
     margin-right: 2em;
     width: 400px;
+    height: 120px;
     border-radius: $border-radius;
     box-shadow: $box-shadow;
     display: flex;
@@ -52,5 +53,17 @@
     .task{
         display: flex;
         flex-flow: row;
+    }
+}
+
+.grades{
+    width: auto;
+    border-radius: $border-radius;
+    background-color: white;
+    color: hotpink;
+    box-shadow: $box-shadow;
+
+    .grade{
+        display: flex;
     }
 }
