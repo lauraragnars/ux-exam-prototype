@@ -1,0 +1,51 @@
+@import "../base/variables";
+
+#login {
+  .login_modal {
+    background-color: $color-off-white;
+    box-shadow: $box-shadow;
+    border-radius: $border-radius;
+    padding: 2rem;
+    width: 500px;
+    margin: 0;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+
+    h3 {
+      font-weight: 700;
+      margin-bottom: 2rem;
+    }
+
+    .login_flex {
+      display: flex;
+      gap: 1rem;
+
+      div {
+        padding: 0.5rem 0;
+        border-bottom: 1px solid $color-main;
+
+        h4 {
+          font-size: 1rem;
+        }
+      }
+    }
+
+    form {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.8rem;
+      margin-top: 1rem;
+
+      input {
+        display: block;
+        font-family: $font-family;
+        width: 100%;
+        border: 1px solid $color-main;
+        padding: 1rem;
+        border-radius: $border-radius-small;
+      }
+    }
+  }
+}

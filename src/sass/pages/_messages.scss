@@ -1,0 +1,227 @@
+#messages {
+  // overflow: hidden;
+  .content {
+    display: flex;
+    flex-wrap: wrap;
+
+    //Messagelist on left hand side start
+
+    .column_narrow {
+      //   border: 1px solid black;
+      flex-grow: 2;
+      flex-basis: 200px;
+      border-right: 1px solid $color-main-tint !important;
+      padding-right: 10px;
+
+      .user_image {
+        width: 20%;
+        margin-right: 10px;
+      }
+
+      .test {
+        width: 100%;
+      }
+
+      .message_wrapper {
+        display: flex;
+        align-items: center;
+
+        width: 100%;
+        padding: 10px;
+        border-radius: 10px;
+      }
+
+      .message_header {
+        display: flex;
+        align-items: center;
+        margin-top: 10px;
+        margin-bottom: 10px;
+        width: 100%;
+        padding: 20px 10px;
+        justify-content: space-between;
+        align-items: center;
+        box-shadow: 0 4px 25px -2px rgba(0, 0, 0, 0.05);
+
+        img {
+          width: 10%;
+        }
+      }
+
+      .message_date {
+        font-size: 10px;
+        margin-bottom: 3px;
+      }
+
+      .unopened_message {
+        h4,
+        p {
+          font-weight: 400 !important;
+        }
+      }
+
+      .message_excerpt {
+        margin-top: 3px;
+      }
+      .purple_circle {
+        width: 9px;
+        height: 9px;
+        border-radius: 50%;
+        background-color: $color-purple;
+      }
+    }
+
+    //Messagelist on left hand side end
+
+    //Open chat (on right side) start
+    .column_wide {
+      display: none;
+      height: 93vh;
+      flex-grow: 3;
+      flex-basis: 600px;
+      position: relative;
+
+      .chat_wrapper {
+        display: flex;
+        flex-wrap: wrap;
+        margin-top: 5px;
+      }
+
+      .chat {
+        width: 100%;
+      }
+
+      .message_a {
+        width: 80%;
+      }
+      .message_b {
+        width: 80%;
+        float: right;
+      }
+
+      .messagebubble1 {
+        width: 80%;
+        background-color: $color-purple-tint;
+        border-radius: 10px;
+        padding: 20px;
+        margin: 5px 10px;
+      }
+
+      .filler {
+        display: none;
+      }
+      .messagebubble2 {
+        width: 80%;
+        background-color: $color-purple;
+        border-radius: 10px;
+        float: right;
+        padding: 20px;
+        margin: 5px 10px;
+
+        p {
+          color: white;
+        }
+      }
+
+      .messagefield-wrapper {
+        width: 100%;
+        height: 60px;
+        position: absolute;
+        bottom: 0;
+        display: flex;
+        margin-bottom: 30px;
+
+        .message_icons {
+          display: flex;
+          align-items: center;
+          margin-left: 10px;
+          width: 20%;
+        }
+        .messagefield {
+          // border: 1px solid black;
+          width: 100%;
+          border-radius: 10px;
+          margin: 5px;
+          display: flex;
+          align-items: center;
+          padding: 5px;
+          background-color: $color-main-tint;
+        }
+
+        .icon_placeholder {
+          width: 30px;
+          height: 30px;
+          margin-right: 5px;
+          border: 1px solid black;
+        }
+      }
+
+      .chat_header {
+        display: flex;
+        background-color: $color-off-white;
+        align-items: center;
+        padding: 20px 10px;
+        box-shadow: 0 4px 25px -2px rgba(0, 0, 0, 0.05);
+        img {
+          width: 10%;
+          margin-right: 10px;
+        }
+      }
+    }
+  }
+}
+@media only screen and (min-width: 768px) {
+  #messages {
+    .content {
+      .column_wide {
+        .message_a {
+          width: 60%;
+        }
+        .message_b {
+          width: 60%;
+          float: right;
+        }
+      }
+    }
+  }
+}
+
+//Desktop media query
+@media only screen and (min-width: 1200px) {
+  #messages {
+    .backarrow {
+      display: none;
+    }
+    overflow: hidden;
+
+    .column_narrow {
+      display: unset;
+      .message_wrapper:nth-child(2) {
+        background-color: $color-main-tint;
+      }
+    }
+    .content {
+      .column_wide {
+        display: unset;
+        .message_a {
+          width: 45%;
+        }
+        .message_b {
+          width: 45%;
+          float: right;
+        }
+        .messagebubble1 {
+          width: 100%;
+        }
+        .messagebubble2 {
+          width: 100%;
+        }
+
+        .messagefield-wrapper {
+          .message_icons {
+            width: 10%;
+          }
+        }
+      }
+    }
+  }
+}

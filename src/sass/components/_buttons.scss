@@ -1,0 +1,18 @@
+@import "../base/variables";
+
+button,
+.button {
+  width: 100%;
+  background-color: $color-main;
+  color: $color-off-white;
+  padding: 1rem;
+  border-radius: $border-radius-small;
+  font-family: $font-family;
+  transition: 0.3s;
+  text-align: center;
+  text-decoration: none;
+
+  &:hover {
+    background-color: rgba($color-main, 0.9);
+  }
+}
