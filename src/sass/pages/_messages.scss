@@ -80,6 +80,10 @@
       flex-basis: 600px;
       position: relative;
 
+      .empty_chat {
+        display: none;
+      }
+
       .chat_wrapper {
         display: flex;
         flex-wrap: wrap;
@@ -208,6 +212,9 @@
       .column_wide {
         display: unset;
 
+        .empty_chat {
+          display: none;
+        }
         .chat_header {
           padding: 5px 10px;
 
