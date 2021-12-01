@@ -18,12 +18,24 @@
         margin-right: 10px;
       }
 
+      .new-message {
+        display: none !important;
+      }
+
       .test {
         width: 100%;
       }
 
       .message_wrapper {
         display: flex;
+        align-items: center;
+
+        width: 100%;
+        padding: 10px;
+        border-radius: 10px;
+      }
+      .new_message_wrapper {
+        display: none;
         align-items: center;
 
         width: 100%;
@@ -80,6 +92,10 @@
       flex-basis: 600px;
       position: relative;
 
+      .empty_chat {
+        display: none;
+      }
+
       .chat_wrapper {
         display: flex;
         flex-wrap: wrap;
@@ -124,7 +140,6 @@
 
       .messagefield-wrapper {
         width: 100%;
-        height: 60px;
         position: absolute;
         bottom: 0;
         display: flex;
@@ -133,12 +148,18 @@
         .message_icons {
           display: flex;
           align-items: center;
+          justify-content: center;
           margin-left: 10px;
-          width: 20%;
+          width: 10%;
+
+          img {
+            width: 80%;
+          }
         }
         .messagefield {
           // border: 1px solid black;
           width: 100%;
+          height: 50px;
           border-radius: 10px;
           margin: 5px;
           display: flex;
@@ -195,6 +216,7 @@
 
     .column_narrow {
       display: unset;
+
       .message_wrapper:nth-child(2) {
         background-color: $color-main-tint;
       }
@@ -202,6 +224,17 @@
     .content {
       .column_wide {
         display: unset;
+
+        .empty_chat {
+          display: none;
+        }
+        .chat_header {
+          padding: 5px 10px;
+
+          img {
+            width: 8%;
+          }
+        }
         .message_a {
           width: 45%;
         }
@@ -218,7 +251,14 @@
 
         .messagefield-wrapper {
           .message_icons {
-            width: 10%;
+            width: 5%;
+
+            img {
+              width: 60%;
+            }
+          }
+          .messagefield {
+            height: 50px;
           }
         }
       }
