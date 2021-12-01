@@ -18,12 +18,24 @@
         margin-right: 10px;
       }
 
+      .new-message {
+        display: none !important;
+      }
+
       .test {
         width: 100%;
       }
 
       .message_wrapper {
         display: flex;
+        align-items: center;
+
+        width: 100%;
+        padding: 10px;
+        border-radius: 10px;
+      }
+      .new_message_wrapper {
+        display: none;
         align-items: center;
 
         width: 100%;
@@ -204,6 +216,7 @@
 
     .column_narrow {
       display: unset;
+
       .message_wrapper:nth-child(2) {
         background-color: $color-main-tint;
       }

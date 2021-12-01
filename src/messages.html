@@ -20,6 +20,14 @@
               <h1>Messages</h1>
               <img class="new_message" src="av-assets/newmessage.svg" alt="" />
             </div>
+            <div class="new_message_wrapper">
+              <img class="user_image" src="av-assets/user_image.png" alt="user_image" />
+              <div class="message">
+                <p class="message_date">24/11/2021</p>
+                <h4 class="user_name">New Message</h4>
+              </div>
+              <div></div>
+            </div>
             <div class="message_wrapper clickable_chat unopened_message">
               <img class="user_image" src="av-assets/user_image.png" alt="user_image" />
               <div class="message">
@@ -29,6 +37,7 @@
               </div>
               <div class="purple_circle"></div>
             </div>
+
             <div class="message_wrapper">
               <img class="user_image" src="av-assets/user_image.png" alt="user_image" />
               <div class="message">
@@ -141,13 +150,13 @@
     </div>
     <script src="index.js"></script>
     <script>
+      let newMessage = document.querySelector(".new_message");
       function mediaQuery(x) {
         if (x.matches) {
           let clickableChat = document.querySelector(".clickable_chat");
           let backArrow = document.querySelector(".backarrow");
 
           clickableChat.addEventListener("click", () => {
-            console.log("click");
             document.querySelector(".column_wide").style.display = "unset";
             document.querySelector(".column_narrow").style.display = "none";
             document.querySelector(".clickable_chat").classList.remove("unopened_message");
@@ -158,21 +167,28 @@
             document.querySelector(".column_wide").style.display = "none";
             document.querySelector(".column_narrow").style.display = "unset";
           });
+
+          newMessage.addEventListener("click", () => {
+            document.querySelector(".column_wide").style.display = "unset";
+            document.querySelector(".column_narrow").style.display = "none";
+            document.querySelector(".active_chat").style.display = "none";
+            document.querySelector(".empty_chat").style.display = "unset";
+            document.querySelector(".chat_header h3").innerHTML = "To: ";
+            document.querySelector(".sender_image").style.display = "none";
+          });
         } else {
-          console.log("nothing");
+          newMessage.addEventListener("click", () => {
+            document.querySelector(".active_chat").style.display = "none";
+            document.querySelector(".empty_chat").style.display = "unset";
+            document.querySelector(".new_message_wrapper").style.display = "flex";
+            document.querySelector(".chat_header h3").innerHTML = "To: ";
+            document.querySelector(".sender_image").style.display = "none";
+          });
         }
       }
       var x = window.matchMedia("(max-width: 1199px)");
       mediaQuery(x);
       x.addListener(mediaQuery);
-
-      let newMessage = document.querySelector(".new_message");
-
-      newMessage.addEventListener("click", () => {
-        console.log("new message click");
-        document.querySelector(".active_chat").style.display = "none";
-        document.querySelector(".empty_chat").style.display = "unset";
-      });
     </script>
   </body>
 </html>
