@@ -192,14 +192,28 @@
 }
 @media only screen and (min-width: 768px) {
   #messages {
+    .backarrow {
+      display: none;
+    }
     .content {
       .column_wide {
+        display: unset;
+        flex-grow: 3;
+        flex-basis: 300px;
         .message_a {
           width: 60%;
         }
         .message_b {
           width: 60%;
           float: right;
+        }
+
+        .messagefield-wrapper {
+          .message_icons {
+            img {
+              width: 60%;
+            }
+          }
         }
       }
     }
@@ -209,21 +223,24 @@
 //Desktop media query
 @media only screen and (min-width: 1200px) {
   #messages {
-    .backarrow {
-      display: none;
-    }
     overflow: hidden;
 
-    .column_narrow {
-      display: unset;
-
-      .message_wrapper:nth-child(2) {
-        background-color: $color-main-tint;
-      }
-    }
     .content {
+      .column_narrow {
+        display: unset;
+
+        .message_wrapper:nth-child(2) {
+          background-color: $color-main-tint;
+        }
+
+        .message_header {
+          margin-top: 0;
+        }
+      }
       .column_wide {
         display: unset;
+        flex-grow: 3;
+        flex-basis: 600px;
 
         .empty_chat {
           display: none;
@@ -235,6 +252,7 @@
             width: 8%;
           }
         }
+
         .message_a {
           width: 45%;
         }

@@ -35,3 +35,8 @@ p {
   font-weight: 700;
   font-size: 1.5rem;
 }
+
+#label,
+td {
+  font-family: $font-family;
+}

@@ -10,8 +10,9 @@
     <div class="container messages_container">
       <div class="content_container">
         <div class="top_navbar">
-          <p>Notifications</p>
-          <p>Profile</p>
+          <img class="bell" src="./assets/icons/notification.svg" alt="Notification bell" />
+          <img class="photo" src="./assets/profilepicture.png" alt="Profile picture" />
+          <p>Anna Smith</p>
         </div>
 
         <div class="content">
@@ -23,7 +24,6 @@
             <div class="new_message_wrapper">
               <img class="user_image" src="av-assets/user_image.png" alt="user_image" />
               <div class="message">
-                <p class="message_date">24/11/2021</p>
                 <h4 class="user_name">New Message</h4>
               </div>
               <div></div>
@@ -182,11 +182,12 @@
             document.querySelector(".empty_chat").style.display = "unset";
             document.querySelector(".new_message_wrapper").style.display = "flex";
             document.querySelector(".chat_header h3").innerHTML = "To: ";
+            document.querySelector(".chat_header").style.padding = "15px 10px";
             document.querySelector(".sender_image").style.display = "none";
           });
         }
       }
-      var x = window.matchMedia("(max-width: 1199px)");
+      var x = window.matchMedia("(max-width: 767px)");
       mediaQuery(x);
       x.addListener(mediaQuery);
     </script>
