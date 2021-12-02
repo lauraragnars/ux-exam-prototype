@@ -15,7 +15,69 @@
           <img class="photo" src="./assets/profilepicture.png" alt="Profile picture">
           <p>Anna Smith</p>
         </div>
-        <h1>Calendar</h1>
+        <div class="month">
+          <span class="left calendar_button" id="prev"> &lang; </span> 
+          <h1>September 2021</h1>
+          <span class="right calendar_button" id="next"> &rang; </span>
+        </div>
+        <div id="cal">
+          <table id="days">
+            <td>sun</td> 
+            <td>mon</td> 
+            <td>tue</td> 
+            <td>wed</td> 
+            <td>thu</td> 
+            <td>fri</td> 
+            <td>sat</td>
+          </table>
+          <div id="cal-frame">
+            <table class="curr"> 
+              <tbody> 
+                  <tr>
+                    <td class="nil"></td>
+                    <td class="nil"></td>
+                    <td>1
+                      <div class="calendar_events">
+                        <div class="calendar_event">
+                          <div class="calendar_dot"></div>
+                          <div class="calendar_name">GDD4 Project</div>
+                        </div>
+                        <div class="calendar_timeof">10:00</div>
+                      </div>
+                    </td>
+                    <td>2</td>
+                    <td>3</td>
+                    <td>4</td>
+                    <td>5</td>
+                  </tr> 
+                  <tr><td>6</td><td>7</td><td>8</td><td>9</td><td>10</td><td class="today">11</td><td>12</td></tr> 
+                  <tr><td>13</td><td>14</td><td>15</td><td>16</td><td>17</td><td>18</td><td>19</td></tr> 
+                  <tr><td>20</td><td>21</td><td>22</td><td>23</td>
+                    <td>
+                      <span class="current_day">24</span><br>
+                      <div class="calendar_events">
+                        <div class="calendar_event">
+                          <div class="calendar_dot"></div>
+                          <div class="calendar_name">GDD5 Project</div>
+                        </div>
+                        <div class="calendar_timeof">10:00</div>
+                      </div>
+                    </td><td>25</td><td>26</td></tr> 
+                  <tr><td>27</td><td>28</td><td>29</td><td>30</td><td class="nil"></td><td class="nil"></td><td class="nil"></td></tr> 
+              </tbody> 
+          </table>
+          </div>
+          <div class="mobile_calendar">
+            <h3>Today</h3>
+            <div class="calendar_events">
+              <div class="calendar_event">
+                <div class="calendar_dot"></div>
+                <div class="calendar_name"><p>GDD4 Project</p></div>
+              </div>
+              <div class="calendar_timeof"><p>10:00</p></div>
+            </div>
+          </div>
+        </div>
     </div>
     <script src="index.js"></script>
   </body>
