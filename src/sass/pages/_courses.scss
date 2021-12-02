@@ -1,6 +1,8 @@
 @import '../base/variables';
 
 // All courses page
+
+
 #courses {
   .header {
     margin: 1rem 3rem 0;
@@ -88,14 +90,32 @@
         border-radius: $border-radius;
         font-family: $font-family;
         padding: 1rem;
-        display: flex;
+        display: grid;
+        grid-template-columns: 1fr 5fr .5fr;
+        gap: 1rem;
         justify-content: space-between;
         align-items: center;
         span {
           font-size: 2rem;
         }
+        .blue{
+            text-transform: uppercase;
+            padding-bottom: 5px;
+            color: $color-blue;
+        }
+        .gray{
+            color: #afafaf;
+        }
+       
+        a{
+            text-decoration: none;
+            color:black;
+            padding-right: 10px;
+        }
         h3 {
           text-align: center;
+          padding-right: 10px;
+          border-right: #afafaf solid 1px;
         }
         p {
           font-size: 1rem;
@@ -120,3 +140,56 @@
     }
   }
 }
+
+//MODAL
+.modal-window {
+    position: fixed;
+    font-family: $font-family;
+    background-color: rgba(0, 0, 0, 0.25);
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    z-index: 999;
+    visibility: hidden;
+    opacity: 0;
+    pointer-events: none;
+    transition: all 0.3s;
+    &:target {
+      visibility: visible;
+      opacity: 1;
+      pointer-events: auto;
+    }
+    & > div {
+      width: 400px;
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      padding: 2em;
+      background: white;
+      border-radius: $border-radius;
+      box-shadow: $box-shadow;
+    }
+    header {
+      font-weight: bold;
+    }
+    h1 {
+      font-size: 150%;
+      margin: 0 0 15px;
+    }
+  }
+  .modal-close {
+    color: #aaa;
+    line-height: 50px;
+    font-size: 80%;
+    position: absolute;
+    right: 0;
+    text-align: center;
+    top: 0;
+    width: 70px;
+    text-decoration: none;
+    &:hover {
+      color: black;
+    }
+  }

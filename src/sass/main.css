@@ -432,9 +432,11 @@ button:hover,
   border-radius: 20px;
   font-family: "Outfit", sans-serif;
   padding: 1rem;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 1fr 5fr .5fr;
+      grid-template-columns: 1fr 5fr .5fr;
+  gap: 1rem;
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
@@ -447,8 +449,26 @@ button:hover,
   font-size: 2rem;
 }
 
+#courses .tasks ul li .blue {
+  text-transform: uppercase;
+  padding-bottom: 5px;
+  color: #3d9be2;
+}
+
+#courses .tasks ul li .gray {
+  color: #afafaf;
+}
+
+#courses .tasks ul li a {
+  text-decoration: none;
+  color: black;
+  padding-right: 10px;
+}
+
 #courses .tasks ul li h3 {
   text-align: center;
+  padding-right: 10px;
+  border-right: #afafaf solid 1px;
 }
 
 #courses .tasks ul li p {
@@ -473,6 +493,67 @@ button:hover,
       -ms-flex-pack: justify;
           justify-content: space-between;
   padding: 1rem;
+}
+
+.modal-window {
+  position: fixed;
+  font-family: "Outfit", sans-serif;
+  background-color: rgba(0, 0, 0, 0.25);
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  z-index: 999;
+  visibility: hidden;
+  opacity: 0;
+  pointer-events: none;
+  -webkit-transition: all 0.3s;
+  transition: all 0.3s;
+}
+
+.modal-window:target {
+  visibility: visible;
+  opacity: 1;
+  pointer-events: auto;
+}
+
+.modal-window > div {
+  width: 400px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+  padding: 2em;
+  background: white;
+  border-radius: 20px;
+  -webkit-box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+          box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+}
+
+.modal-window header {
+  font-weight: bold;
+}
+
+.modal-window h1 {
+  font-size: 150%;
+  margin: 0 0 15px;
+}
+
+.modal-close {
+  color: #aaa;
+  line-height: 50px;
+  font-size: 80%;
+  position: absolute;
+  right: 0;
+  text-align: center;
+  top: 0;
+  width: 70px;
+  text-decoration: none;
+}
+
+.modal-close:hover {
+  color: black;
 }
 
 #dashboard .header {

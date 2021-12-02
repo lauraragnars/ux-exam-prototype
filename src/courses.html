@@ -7,6 +7,22 @@
     <title>UX - Prototype</title>
   </head>
   <body id="courses">
+    <div id="open-task-modal" class="modal-window">
+      <div>
+        <a href="#" title="Close" class="modal-close">Close</a>
+        <h2>Assignment</h2>
+        <h3>User experience</h3>
+        <p>Blablablablabla</p>
+      </div>
+    </div>
+    <div id="open-feedback-modal" class="modal-window">
+      <div>
+        <a href="#" title="Close" class="modal-close">Close</a>
+        <h2>Feedback</h2>
+        <h3>User experience</h3>
+        <p>Blablablablabla</p>
+      </div>
+    </div>
     <div class="container courses_container">
       <div class="content_container">
         <div class="top_navbar">
@@ -68,7 +84,8 @@
                 </div>
                 <div class="grade">
                   <h3>GDD1</h3>
-                  <h4>Feedback available</h4>
+                  <h4> <a href="#open-feedback-modal">
+                    Feedback available</a></h4>
                   <h3>80%</h3>
                 </div>
               </div>
@@ -78,72 +95,61 @@
             <div class="section tasks">
               <h3 class="subheader">To Do</h3>
               <div class="tasks subsection">
-                <a href="#">
-                  <div class="task">
-                    <ul>
-                      <li class="task">
-                        <div>
-                          <h3>
-                            <span>13</span>
-                            <br />
-                            Sept
-                          </h3>
-                        </div>
-                        <div>
-                          <h4>User experience</h4>
-                          <p>blablabla</p>
-                        </div>
-                        <div>
-                          <p>></p>
-                        </div>
-                      </li>
-                      <li class="task">
-                        <div>
-                          <h3>
-                            <span>13</span>
-                            <br />
-                            Sept
-                          </h3>
-                        </div>
-                        <div>
-                          <h4>User experience</h4>
-                          <p>blablabla</p>
-                        </div>
-                        <div>
-                          <p>></p>
-                        </div>
-                      </li>
-                      <li class="task">
-                        <div>
-                          <h3>
-                            <span>13</span>
-                            <br />
-                            Sept
-                          </h3>
-                        </div>
-                        <div>
-                          <h4>User experience</h4>
-                          <p>blablabla</p>
-                        </div>
-                        <div>
-                          <p>></p>
-                        </div>
-                      </li>
-                    </ul>
-                    <!-- <div>
-                    <h3>
-                      <span>13.</span>
-                      <br />
-                      Sept
-                    </h3>
-                  </div>
-                  <div>
-                    <h4>Reading material</h4>
-                    <h4>User experience</h4>
-                    <h4>GDD4 Frameworks</h4>
-                  </div> -->
-                  </div>
-                </a>
+                <div class="task">
+                  <ul>
+                    <li class="task">
+                      <div>
+                        <h3>
+                          <span>13</span>
+                          <br />
+                          Sept
+                        </h3>
+                      </div>
+                      <a href="#open-task-modal">
+                        <h4 class="blue">Reading material</h4>
+                        <h4 class="gray">User experience</h4>
+                        <p>blablabla</p>
+                      </a>
+                      <div>
+                        <p>></p>
+                      </div>
+                    </li>
+                    <li class="task">
+                      <div>
+                        <h3>
+                          <span>13</span>
+                          <br />
+                          Sept
+                        </h3>
+                      </div>
+                      <a href="#open-task-modal">
+                        <h4 class="blue">Reading material</h4>
+                        <h4 class="gray">User experience</h4>
+                        <p>blablabla</p>
+                      </a>
+                      <div>
+                        <p>></p>
+                      </div>
+                    </li>
+                    <li class="task">
+                      <div>
+                        <h3>
+                          <span>13</span>
+                          <br />
+                          Sept
+                        </h3>
+                      </div>
+                      <a href="#open-task-modal">
+                        <h4 class="blue">Reading material</h4>
+                        <h4 class="gray">User experience</h4>
+                        <p>blablabla</p>
+                      </a>
+                      <div>
+                        <p>></p>
+                      </div>
+                    </li>
+                  </ul>
+                </div>
               </div>
             </div>
           </div>
