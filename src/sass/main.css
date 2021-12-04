@@ -65,6 +65,12 @@ h4 {
   font-size: 0.9rem;
 }
 
+h5 {
+  font-family: "Outfit", sans-serif;
+  font-weight: 400;
+  font-size: 1rem;
+}
+
 p {
   font-family: "Outfit", sans-serif;
   font-weight: 200;
@@ -357,27 +363,73 @@ button:hover,
   margin-left: 10px;
 }
 
-#courses .header {
-  margin: 1rem 3rem 0;
+#courses .wrapper {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-flow: column;
+          flex-flow: column;
 }
 
-#courses .subheader {
-  margin-top: 2rem;
-  margin-bottom: 1.5rem;
+#courses .wrapper h1 {
+  margin: 3rem;
 }
 
-#courses .coursesContainer {
-  display: -ms-grid;
-  display: grid;
-  -ms-grid-columns: 1.5fr 1fr;
-      grid-template-columns: 1.5fr 1fr;
-  gap: 5em;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
+#courses .submenu {
+  justify-self: flex-start;
+  margin: 0 3rem;
 }
 
-#courses .courses {
+#courses .submenu ul {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  font-family: "Outfit", sans-serif;
+  font-weight: 400;
+  gap: 1rem;
+  font-size: 1.1rem;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+}
+
+@media (min-width: 475px) {
+  #courses .submenu ul {
+    -ms-flex-wrap: nowrap;
+        flex-wrap: nowrap;
+  }
+}
+
+#courses .submenu ul li {
+  padding: 0.5rem 1rem;
+  border-radius: 20px;
+  cursor: pointer;
+  -webkit-transition: 0.3s;
+  transition: 0.3s;
+}
+
+#courses .submenu ul li:nth-child(1) {
+  background-color: #e7f8ff;
+  color: #3d9be2;
+}
+
+#courses .submenu ul li:nth-child(2) {
+  background-color: #f0e8fc;
+  color: #713fdb;
+}
+
+#courses .submenu ul li:nth-child(3) {
+  background-color: #ffeee4;
+  color: #f8835e;
+}
+
+#courses .submenu ul li.disabled {
+  background-color: #f1f1f1;
+  color: #bdbdbd;
+}
+
+#courses .projects {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -385,44 +437,42 @@ button:hover,
   -webkit-box-direction: normal;
       -ms-flex-flow: row wrap;
           flex-flow: row wrap;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
-  gap: 1em;
+  gap: 1rem;
+  margin: 1.5rem 0;
 }
 
-#courses .course {
+#courses .projects .hidden {
+  display: none;
+}
+
+#courses .projects .ux {
+  background-color: #e7f8ff;
+}
+
+#courses .projects .db {
+  background-color: #ffeee4;
+}
+
+#courses .projects .wd {
+  background-color: #f0e8fc;
+}
+
+#courses .project {
   height: 120px;
   width: 120px;
-  background-color: #f0e8fc;
   border-radius: 20px;
   -webkit-box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
           box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
   display: table;
   text-align: center;
-  margin: 0 auto;
   cursor: pointer;
-  margin: 0;
   -webkit-transition: 0.3s;
   transition: 0.3s;
 }
 
-#courses .course a {
+#courses .project a {
   text-decoration: none;
-}
-
-#courses .course h3 {
-  color: black;
-  height: 120px;
-  text-align: center;
-  margin: 0 auto;
-  display: table-cell;
-  vertical-align: middle;
-}
-
-#courses .course:hover {
-  font-size: 1.05em;
-  color: pink;
+  color: #000000;
 }
 
 #courses .subsection {
@@ -436,19 +486,46 @@ button:hover,
   margin: 1.5rem 0;
 }
 
+#courses .tasks .hidden {
+  display: none;
+}
+
 #courses .tasks ul {
   padding: 1.2rem;
 }
 
-#courses .tasks ul li {
+#courses .tasks ul .ux {
   background-color: #e7f8ff;
+}
+
+#courses .tasks ul .ux .blue {
+  color: #3d9be2;
+}
+
+#courses .tasks ul .db {
+  background-color: #ffeee4;
+}
+
+#courses .tasks ul .db .orange {
+  color: #f8835e;
+}
+
+#courses .tasks ul .wd {
+  background-color: #f0e8fc;
+}
+
+#courses .tasks ul .wd .purple {
+  color: #713fdb;
+}
+
+#courses .tasks ul li {
   border-radius: 20px;
   font-family: "Outfit", sans-serif;
   padding: 1rem;
   display: -ms-grid;
   display: grid;
-  -ms-grid-columns: 1fr 5fr .5fr;
-      grid-template-columns: 1fr 5fr .5fr;
+  -ms-grid-columns: 1fr 5fr 0.5fr;
+      grid-template-columns: 1fr 5fr 0.5fr;
   gap: 1rem;
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
@@ -462,14 +539,13 @@ button:hover,
   font-size: 2rem;
 }
 
-#courses .tasks ul li .blue {
+#courses .tasks ul li .blue, #courses .tasks ul li .purple, #courses .tasks ul li .orange {
   text-transform: uppercase;
   padding-bottom: 5px;
-  color: #3d9be2;
 }
 
 #courses .tasks ul li .gray {
-  color: #afafaf;
+  color: #bdbdbd;
 }
 
 #courses .tasks ul li a {
@@ -481,7 +557,7 @@ button:hover,
 #courses .tasks ul li h3 {
   text-align: center;
   padding-right: 10px;
-  border-right: #afafaf solid 1px;
+  border-right: #bdbdbd solid 1px;
 }
 
 #courses .tasks ul li p {
@@ -495,17 +571,24 @@ button:hover,
 #courses .grades {
   width: auto;
   border-radius: 20px;
-  background-color: white;
+  background-color: #fefefe;
 }
 
 #courses .grades .grade {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 2fr 3fr 1fr;
+      grid-template-columns: 2fr 3fr 1fr;
   padding: 1rem;
+}
+
+#courses .grades .grade a {
+  text-decoration: none;
+  color: #bdbdbd;
+}
+
+#courses .grades .hidden {
+  display: none;
 }
 
 .modal-window {
@@ -538,23 +621,18 @@ button:hover,
   -webkit-transform: translate(-50%, -50%);
           transform: translate(-50%, -50%);
   padding: 2em;
-  background: white;
+  background: #fefefe;
   border-radius: 20px;
   -webkit-box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
           box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
 }
 
-.modal-window header {
-  font-weight: bold;
-}
-
-.modal-window h1 {
-  font-size: 150%;
-  margin: 0 0 15px;
+.modal-window h3, .modal-window h4 {
+  margin-bottom: 1rem;
 }
 
 .modal-close {
-  color: #aaa;
+  color: #bdbdbd;
   line-height: 50px;
   font-size: 80%;
   position: absolute;
@@ -566,7 +644,7 @@ button:hover,
 }
 
 .modal-close:hover {
-  color: black;
+  color: #000000;
 }
 
 #dashboard .header {
@@ -1340,10 +1418,67 @@ button:hover,
 
 .announcement .aComment input {
   border-radius: 20px;
-  border: #afafaf solid 1px;
+  border: #bdbdbd solid 1px;
   font-family: "Outfit", sans-serif;
   font-weight: lighter;
   padding: 1rem;
   width: 100%;
+}
+
+#project .projects {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-flow: column;
+          flex-flow: column;
+  gap: 1rem;
+}
+
+#project .project {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-flow: column;
+          flex-flow: column;
+  border-radius: 20px;
+  -webkit-box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+          box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+  background-color: white;
+  padding: 2rem;
+  gap: 1rem;
+}
+
+#project ul {
+  margin: 2rem 3rem;
+}
+
+#project li {
+  font-family: "Outfit", sans-serif;
+  list-style-type: decimal;
+  font-size: .9rem;
+  font-weight: 300;
+  margin: 1rem 0;
+}
+
+#project p {
+  font-size: 1rem;
+}
+
+#project input {
+  font-family: "Outfit", sans-serif;
+}
+
+#project #pComment {
+  border-radius: 20px;
+  border: #bdbdbd solid 1px;
+  padding: 1rem;
+}
+
+#project h5 {
+  margin-top: 1rem;
 }
 /*# sourceMappingURL=main.css.map */
