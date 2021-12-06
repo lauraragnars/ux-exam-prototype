@@ -1,18 +1,12 @@
 @import '../base/variables';
 
 
-h3{
-  margin-bottom: 1rem;
-}
+
 #announcements {
 
   // TEACHER ONLY
   
 
-  .aTeacher{
-    
-  }
- 
   #aPost {
     width: 100%;
     height: 100px;
@@ -42,7 +36,24 @@ h3{
     gap: 1rem;
     .aTeacher{
       .classes{
-        margin:1rem;
+        display: flex;
+        flex-flow: column;
+        @media (min-width: 900px){
+          display: block;
+        }
+      }
+      h3{
+        margin-bottom:1rem;
+      }
+      h4{
+        color: $color-gray;
+        margin-bottom: .5rem;
+      }
+      #class{
+        margin-right: 1rem;
+      }
+      label, input{
+        font-family: $font-family;
       }
     }
     .aFlex {

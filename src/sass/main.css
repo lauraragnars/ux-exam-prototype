@@ -1378,10 +1378,6 @@ button:hover,
   display: none;
 }
 
-h3 {
-  margin-bottom: 1rem;
-}
-
 #announcements #aPost {
   width: 100%;
   height: 100px;
@@ -1423,7 +1419,36 @@ h3 {
 }
 
 #announcements .announcement .aTeacher .classes {
-  margin: 1rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-flow: column;
+          flex-flow: column;
+}
+
+@media (min-width: 900px) {
+  #announcements .announcement .aTeacher .classes {
+    display: block;
+  }
+}
+
+#announcements .announcement .aTeacher h3 {
+  margin-bottom: 1rem;
+}
+
+#announcements .announcement .aTeacher h4 {
+  color: #969696;
+  margin-bottom: .5rem;
+}
+
+#announcements .announcement .aTeacher #class {
+  margin-right: 1rem;
+}
+
+#announcements .announcement .aTeacher label, #announcements .announcement .aTeacher input {
+  font-family: "Outfit", sans-serif;
 }
 
 #announcements .announcement .aFlex {
