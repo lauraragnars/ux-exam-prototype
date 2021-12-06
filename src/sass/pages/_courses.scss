@@ -61,12 +61,21 @@
     }
     .ux{
       background-color: $color-blue-tint;
+      h3{
+        color: $color-blue;
+      }
     }
     .db{
       background-color: $color-orange-tint;
+      h3{
+        color: $color-orange;
+      }
     }
     .wd{
       background-color: $color-purple-tint;
+      h3{
+        color: $color-purple;
+      }
     }
   }
   .project {
@@ -76,6 +85,7 @@
     box-shadow: $box-shadow;
     display: table;
     text-align: center;
+    vertical-align: middle;
     
     cursor: pointer;
     transition: 0.3s;

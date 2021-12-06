@@ -1,6 +1,7 @@
 @import '../base/variables';
 
 #project {
+
   .projects {
     display: flex;
     flex-flow: column;
@@ -13,7 +14,7 @@
     box-shadow: $box-shadow;
     background-color: white;
     padding: 2rem;
-    gap: 1rem;
+    gap: 1rem; 
   }
   ul{
       margin:2rem 3rem;

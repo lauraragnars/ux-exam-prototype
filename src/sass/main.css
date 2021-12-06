@@ -449,12 +449,24 @@ button:hover,
   background-color: #e7f8ff;
 }
 
+#courses .projects .ux h3 {
+  color: #3d9be2;
+}
+
 #courses .projects .db {
   background-color: #ffeee4;
 }
 
+#courses .projects .db h3 {
+  color: #f8835e;
+}
+
 #courses .projects .wd {
   background-color: #f0e8fc;
+}
+
+#courses .projects .wd h3 {
+  color: #713fdb;
 }
 
 #courses .project {
@@ -465,6 +477,7 @@ button:hover,
           box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
   display: table;
   text-align: center;
+  vertical-align: middle;
   cursor: pointer;
   -webkit-transition: 0.3s;
   transition: 0.3s;
@@ -1365,7 +1378,24 @@ button:hover,
   display: none;
 }
 
-.announcements {
+#announcements #class {
+  margin: 1rem 0 1rem;
+}
+
+#announcements #aPost {
+  width: 100%;
+  height: 100px;
+  border-radius: 20px;
+  padding: 1rem;
+  margin: 1rem 0;
+  border: #bdbdbd solid 1px;
+}
+
+#announcements button {
+  width: 40%;
+}
+
+#announcements .announcements {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -1376,7 +1406,7 @@ button:hover,
   gap: 1rem;
 }
 
-.announcement {
+#announcements .announcement {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -1392,31 +1422,31 @@ button:hover,
   gap: 1rem;
 }
 
-.announcement .aFlex {
+#announcements .announcement .aFlex {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
   gap: 1rem;
 }
 
-.announcement img {
+#announcements .announcement img {
   height: 60px;
   width: auto;
 }
 
-.announcement .aComments {
+#announcements .announcement .aComments {
   display: none;
 }
 
-.announcement .aComment {
+#announcements .announcement .aComment {
   margin: 1rem;
 }
 
-.announcement .aComment .photo {
+#announcements .announcement .aComment .photo {
   height: 40px;
 }
 
-.announcement .aComment input {
+#announcements .announcement .aComment input {
   border-radius: 20px;
   border: #bdbdbd solid 1px;
   font-family: "Outfit", sans-serif;
