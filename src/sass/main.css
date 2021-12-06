@@ -1378,8 +1378,8 @@ button:hover,
   display: none;
 }
 
-#announcements #class {
-  margin: 1rem 0 1rem;
+h3 {
+  margin-bottom: 1rem;
 }
 
 #announcements #aPost {
@@ -1420,6 +1420,10 @@ button:hover,
   background-color: white;
   padding: 2rem;
   gap: 1rem;
+}
+
+#announcements .announcement .aTeacher .classes {
+  margin: 1rem;
 }
 
 #announcements .announcement .aFlex {

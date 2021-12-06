@@ -1,10 +1,18 @@
 @import '../base/variables';
-#announcements {
-  // TEACHER ONLY
 
-  #class{
-    margin: 1rem 0 1rem;
+
+h3{
+  margin-bottom: 1rem;
+}
+#announcements {
+
+  // TEACHER ONLY
+  
+
+  .aTeacher{
+    
   }
+ 
   #aPost {
     width: 100%;
     height: 100px;
@@ -18,7 +26,7 @@
     width: 40%;
   }
 
-  // ALL
+
   .announcements {
     display: flex;
     flex-flow: column;
@@ -32,10 +40,16 @@
     background-color: white;
     padding: 2rem;
     gap: 1rem;
+    .aTeacher{
+      .classes{
+        margin:1rem;
+      }
+    }
     .aFlex {
       display: flex;
       gap: 1rem;
     }
+
 
     img {
       height: 60px;
