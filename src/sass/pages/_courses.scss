@@ -3,16 +3,16 @@
 // All courses page
 
 #courses {
-  .wrapper{
-   display: flex;
-   flex-flow: column;
-   h1{
-     margin: 3rem;
-   }
+  .wrapper {
+    display: flex;
+    flex-flow: column;
+    h1 {
+      margin: 3rem;
+    }
   }
   .submenu {
     justify-self: flex-start;
-    margin: 0 3rem ;
+    margin: 0 3rem;
     ul {
       display: flex;
       font-family: $font-family;
@@ -55,26 +55,36 @@
     flex-flow: row wrap;
     gap: 1rem;
     margin: 1.5rem 0;
-    
+
     .hidden {
       display: none;
     }
-    .ux{
+    .ux {
       background-color: $color-blue-tint;
-      h3{
+      h3 {
         color: $color-blue;
+        font-weight: 300;
       }
     }
-    .db{
+    .db {
       background-color: $color-orange-tint;
-      h3{
+      h3 {
         color: $color-orange;
+        font-weight: 300;
       }
     }
-    .wd{
+    .wd {
       background-color: $color-purple-tint;
-      h3{
+      h3 {
         color: $color-purple;
+        font-weight: 300;
+      }
+    }
+    .teacherView{
+      background-color: $color-light-gray;
+      h3{
+        color: $color-gray;
+        font-weight: 300;
       }
     }
   }
@@ -85,35 +95,15 @@
     box-shadow: $box-shadow;
     display: table;
     text-align: center;
-    vertical-align: middle;
-    
     cursor: pointer;
     transition: 0.3s;
+    padding: 3rem 1rem;
     a {
       text-decoration: none;
       color: $black;
     }
-    
   }
 
-  //   .tasks {
-  //     margin-right: 2em;
-  //     width: 100%;
-  //     height: 120px;
-  //     border-radius: $border-radius;
-  //     box-shadow: $box-shadow;
-  //     display: flex;
-  //     justify-content: flex-end;
-
-  //     .task {
-  //       display: flex;
-
-  //       justify-content: space-between;
-  //       span{
-  //           color:hotpink;
-  //       }
-  //     }
-  //   }
   .subsection {
     background-color: $color-off-white;
     box-shadow: $box-shadow;
@@ -131,19 +121,19 @@
       padding: 1.2rem;
       .ux {
         background-color: $color-blue-tint;
-        .blue{
+        .blue {
           color: $color-blue;
         }
       }
       .db {
         background-color: $color-orange-tint;
-        .orange{
+        .orange {
           color: $color-orange;
         }
       }
       .wd {
         background-color: $color-purple-tint;
-        .purple{
+        .purple {
           color: $color-purple;
         }
       }
@@ -160,11 +150,13 @@
           font-size: 2rem;
         }
 
-        .blue, .purple, .orange {
+        .blue,
+        .purple,
+        .orange {
           text-transform: uppercase;
           padding-bottom: 5px;
         }
-        
+
         .gray {
           color: $color-medium-gray;
         }
@@ -194,13 +186,13 @@
     width: auto;
     border-radius: $border-radius;
     background-color: $color-off-white;
-
+    
     .grade {
       display: grid;
       grid-template-columns: 2fr 3fr 1fr;
       // justify-content: space-between;
       padding: 1rem;
-      a{
+      a {
         text-decoration: none;
         color: $color-medium-gray;
       }
@@ -209,54 +201,54 @@
       display: none;
     }
   }
-}
 
-//MODAL
-.modal-window {
-  position: fixed;
-  font-family: $font-family;
-  background-color: rgba(0, 0, 0, 0.25);
-  top: 0;
-  right: 0;
-  bottom: 0;
-  left: 0;
-  z-index: 999;
-  visibility: hidden;
-  opacity: 0;
-  pointer-events: none;
-  transition: all 0.3s;
-  &:target {
-    visibility: visible;
-    opacity: 1;
-    pointer-events: auto;
+  //MODAL
+  .modal-window {
+    position: fixed;
+    font-family: $font-family;
+    background-color: rgba(0, 0, 0, 0.25);
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    z-index: 999;
+    visibility: hidden;
+    opacity: 0;
+    pointer-events: none;
+    transition: all 0.3s;
+    &:target {
+      visibility: visible;
+      opacity: 1;
+      pointer-events: auto;
+    }
+    & > div {
+      width: 400px;
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      padding: 2em;
+      background: $color-off-white;
+      border-radius: $border-radius;
+      box-shadow: $box-shadow;
+    }
+    h3,
+    h4 {
+      margin-bottom: 1rem;
+    }
   }
-  & > div {
-    width: 400px;
+  .modal-close {
+    color: $color-medium-gray;
+    line-height: 50px;
+    font-size: 80%;
     position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    padding: 2em;
-    background: $color-off-white;
-    border-radius: $border-radius;
-    box-shadow: $box-shadow;
-  }
-h3, h4{
-  margin-bottom: 1rem;
-}
-
-}
-.modal-close {
-  color: $color-medium-gray;
-  line-height: 50px;
-  font-size: 80%;
-  position: absolute;
-  right: 0;
-  text-align: center;
-  top: 0;
-  width: 70px;
-  text-decoration: none;
-  &:hover {
-    color: $black;
+    right: 0;
+    text-align: center;
+    top: 0;
+    width: 70px;
+    text-decoration: none;
+    &:hover {
+      color: $black;
+    }
   }
 }

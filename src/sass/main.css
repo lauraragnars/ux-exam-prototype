@@ -106,6 +106,12 @@ button:hover,
   background-color: rgba(113, 42, 252, 0.9);
 }
 
+button.disabled,
+.button.disabled {
+  background-color: rgba(113, 42, 252, 0.5);
+  cursor: not-allowed;
+}
+
 .calendar_button {
   font-family: "Outfit", sans-serif;
   padding: 1rem;
@@ -451,6 +457,7 @@ button:hover,
 
 #courses .projects .ux h3 {
   color: #3d9be2;
+  font-weight: 300;
 }
 
 #courses .projects .db {
@@ -459,6 +466,7 @@ button:hover,
 
 #courses .projects .db h3 {
   color: #f8835e;
+  font-weight: 300;
 }
 
 #courses .projects .wd {
@@ -467,6 +475,16 @@ button:hover,
 
 #courses .projects .wd h3 {
   color: #713fdb;
+  font-weight: 300;
+}
+
+#courses .projects .teacherView {
+  background-color: #f1f1f1;
+}
+
+#courses .projects .teacherView h3 {
+  color: #969696;
+  font-weight: 300;
 }
 
 #courses .project {
@@ -477,10 +495,10 @@ button:hover,
           box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
   display: table;
   text-align: center;
-  vertical-align: middle;
   cursor: pointer;
   -webkit-transition: 0.3s;
   transition: 0.3s;
+  padding: 3rem 1rem;
 }
 
 #courses .project a {
@@ -552,7 +570,9 @@ button:hover,
   font-size: 2rem;
 }
 
-#courses .tasks ul li .blue, #courses .tasks ul li .purple, #courses .tasks ul li .orange {
+#courses .tasks ul li .blue,
+#courses .tasks ul li .purple,
+#courses .tasks ul li .orange {
   text-transform: uppercase;
   padding-bottom: 5px;
 }
@@ -604,7 +624,7 @@ button:hover,
   display: none;
 }
 
-.modal-window {
+#courses .modal-window {
   position: fixed;
   font-family: "Outfit", sans-serif;
   background-color: rgba(0, 0, 0, 0.25);
@@ -620,13 +640,13 @@ button:hover,
   transition: all 0.3s;
 }
 
-.modal-window:target {
+#courses .modal-window:target {
   visibility: visible;
   opacity: 1;
   pointer-events: auto;
 }
 
-.modal-window > div {
+#courses .modal-window > div {
   width: 400px;
   position: absolute;
   top: 50%;
@@ -640,11 +660,12 @@ button:hover,
           box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
 }
 
-.modal-window h3, .modal-window h4 {
+#courses .modal-window h3,
+#courses .modal-window h4 {
   margin-bottom: 1rem;
 }
 
-.modal-close {
+#courses .modal-close {
   color: #bdbdbd;
   line-height: 50px;
   font-size: 80%;
@@ -656,7 +677,7 @@ button:hover,
   text-decoration: none;
 }
 
-.modal-close:hover {
+#courses .modal-close:hover {
   color: #000000;
 }
 
@@ -1531,6 +1552,10 @@ button:hover,
   font-family: "Outfit", sans-serif;
 }
 
+#project input.disabled {
+  cursor: not-allowed;
+}
+
 #project #pComment {
   border-radius: 20px;
   border: #bdbdbd solid 1px;
@@ -1539,5 +1564,20 @@ button:hover,
 
 #project h5 {
   margin-top: 1rem;
+}
+
+#project #editBtn {
+  background-color: rgba(0, 0, 0, 0);
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
+  color: #969696;
+  text-align: left;
+  padding: 0;
+  cursor: pointer;
+}
+
+#project #editBtn.hidden {
+  display: none;
 }
 /*# sourceMappingURL=main.css.map */

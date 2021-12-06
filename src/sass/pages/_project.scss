@@ -32,6 +32,9 @@
   }
   input{
       font-family: $font-family;
+      &.disabled{
+        cursor: not-allowed;
+      }
   }
   #pComment{
       border-radius: $border-radius;
@@ -41,4 +44,16 @@
   h5{
       margin-top: 1rem;
   }
+  #editBtn{
+    background-color: rgba(0,0,0,0);
+    width: fit-content;
+    color: $color-gray;
+    text-align: left;
+    padding: 0;
+    cursor: pointer;
+    &.hidden{
+      display: none;
+    }
+  }
+
 }
