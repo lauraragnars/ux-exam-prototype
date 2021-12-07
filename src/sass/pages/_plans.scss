@@ -1,6 +1,5 @@
-@import "../base/variables";
-
-#tasks {
+#plans {
+  overflow: hidden;
   .wrapper {
     padding: 0 2rem;
 
@@ -8,7 +7,6 @@
       padding: 0 3rem;
     }
   }
-
   .submenu {
     margin: 2rem 0;
     ul {
@@ -45,46 +43,6 @@
           background-color: $color-light-gray;
           color: $color-medium-gray;
         }
-      }
-    }
-  }
-
-  .task_list {
-    ul {
-      display: flex;
-      flex-direction: column;
-      gap: 1rem;
-
-      li {
-        font-family: $font-family;
-        padding: 1rem;
-        border-radius: $border-radius;
-
-        display: block;
-
-        p {
-          font-size: 1rem;
-          font-weight: 300;
-        }
-      }
-
-      .ux {
-        background-color: $color-blue-tint;
-        color: $color-blue;
-      }
-
-      .db {
-        background-color: $color-orange-tint;
-        color: $color-orange;
-      }
-
-      .wd {
-        background-color: $color-purple-tint;
-        color: $color-purple;
-      }
-
-      .hidden {
-        display: none;
       }
     }
   }
