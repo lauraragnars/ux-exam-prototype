@@ -15,6 +15,10 @@ button,
   &:hover {
     background-color: rgba($color-main, 0.9);
   }
+  &.disabled {
+    background-color: rgba($color-main, 0.5);
+    cursor: not-allowed;
+  }
 }
 .calendar_button {
   font-family: $font-family;

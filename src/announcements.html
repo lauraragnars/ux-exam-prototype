@@ -6,8 +6,8 @@
     <link rel="stylesheet" href="styles.css">
     <title>UX - Prototype</title>
   </head>
-  <body id="participants">
-    <div class="container participants_container">
+  <body id="announcements">
+    <div class="container announcements_container">
     
       <div class="content_container">
         <div class="top_navbar">
@@ -15,7 +15,74 @@
           <img class="photo" src="./assets/profilepicture.png" alt="Profile picture">
           <p>Anna Smith</p>
         </div>
-        <h1>Calendar</h1>
+        <div class="header">
+          <h1>Announcements</h1>
+        </div>
+        <div class="inner_container">
+          <div class="column column_wide">
+            <div class="section announcements">
+              <div class="subsection announcement">
+                <div class="aTeacher">
+                  <div class="classes">
+                    <h3>Make an announcement</h3>
+                    <h4>What classes to include:</h4>
+                    <label id="class"><input type="checkbox"> User Experience</label>
+                    <label id="class"><input type="checkbox"> Databases</label>
+                    <label id="class"><input type="checkbox"> Web Development Semester</label>
+                  </div>
+                  <input type="text" placeholder="What is your announcement" id="aPost">
+                  <button>Post</button>
+                </div>
+              </div>
+              <div class="subsection announcement">
+                <div class="aFlex">
+                  <img class="photo" src="./assets/profilepicture.png" alt="Profile picture">
+                  <div>
+                  <h3>Anna Smith</h3>
+                  <p>Monday at 13:00</p>
+                  </div>
+                </div>
+                <div class="aText">
+                  <p>Welcome to BA in Web Development Development (INT).
+                    We start Monday 23-08 at 9:00-14:00 at Guldbergsgade in the E building E242.
+                    You can find info about booklist, pc requirements, and teaching schedule under the menu Resources.</p>
+                </div>
+                <div class="aComments">
+                  hello
+                </div>
+                <div class="aComment">
+                  <div class="aFlex">
+                    <img class="photo" src="./assets/profilepicture.png" alt="Profile picture">
+                    <input type="text" placeholder="Write a comment">
+                  </div>
+                </div>
+              </div>
+              <div class="subsection announcement">
+                <div class="aFlex">
+                  <img class="photo" src="./assets/profilepicture.png" alt="Profile picture">
+                  <div>
+                  <h3>Anna Smith</h3>
+                  <p>Monday at 13:00</p>
+                  </div>
+                </div>
+                <div class="aText">
+                  <p>Welcome to BA in Web Development Development (INT).
+                    We start Monday 23-08 at 9:00-14:00 at Guldbergsgade in the E building E242.
+                    You can find info about booklist, pc requirements, and teaching schedule under the menu Resources.</p>
+                </div>
+                <div class="aComments">
+                  hello
+                </div>
+                <div class="aComment">
+                  <div class="aFlex">
+                    <img class="photo" src="./assets/profilepicture.png" alt="Profile picture">
+                    <input type="text" placeholder="Write a comment">
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
     </div>
     <script src="index.js"></script>
   </body>
