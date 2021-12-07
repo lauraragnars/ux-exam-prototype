@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="styles.css" />
+    <title>UX - Prototype</title>
+  </head>
+  <body id="plans">
+    <div class="container plans_container">
+      <div class="content_container">
+        <div class="top_navbar">
+          <img class="bell" src="./assets/icons/notification.svg" alt="Notification bell" />
+          <img class="photo" src="./assets/profilepicture.png" alt="Profile picture" />
+          <p>Anna Smith</p>
+        </div>
+        <div class="wrapper">
+          <h1>Plans</h1>
+          <div class="submenu">
+            <ul class="submenu_items">
+              <li data-course="ux" class="ux_menu submenu_item">UX</li>
+              <li data-course="wd" class="wd_menu submenu_item disabled">Web Development</li>
+              <li data-course="db" class="db_menu submenu_item disabled">Databases</li>
+            </ul>
+          </div>
+          <div class="semesterplan">
+            <svg viewBox="0 0 1400 900" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <use href="av-assets/semesterplan.svg#semesterplan"></use>
+            </svg>
+          </div>
+        </div>
+      </div>
+    </div>
+    <script src="index.js"></script>
+    <script src="plans.js"></script>
+  </body>
+</html>

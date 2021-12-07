@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="styles.css" />
+    <title>UX - Prototype</title>
+  </head>
+  <body id="messages">
+    <div class="container messages_container">
+      <div class="content_container">
+        <div class="top_navbar">
+          <img class="bell" src="./assets/icons/notification.svg" alt="Notification bell" />
+          <img class="photo" src="./assets/profilepicture.png" alt="Profile picture" />
+          <p>Anna Smith</p>
+        </div>
+
+        <div class="content">
+          <div class="column_narrow messagelist">
+            <div class="message_header">
+              <h1>Messages</h1>
+              <img class="new_message" src="av-assets/newmessage.svg" alt="" />
+            </div>
+            <div class="new_message_wrapper">
+              <img class="user_image" src="av-assets/user_image.png" alt="user_image" />
+              <div class="message">
+                <h4 class="user_name">New Message</h4>
+              </div>
+              <div></div>
+            </div>
+            <div class="message_wrapper clickable_chat unopened_message">
+              <img class="user_image" src="av-assets/user_image.png" alt="user_image" />
+              <div class="message">
+                <p class="message_date">24/11/2021</p>
+                <h4 class="user_name">Laura Ragnarsdóttir</h4>
+                <p class="message_excerpt">I noticed that the file you handed in for.......</p>
+              </div>
+              <div class="purple_circle"></div>
+            </div>
+
+            <div class="message_wrapper">
+              <img class="user_image" src="av-assets/user_image.png" alt="user_image" />
+              <div class="message">
+                <p class="message_date">24/11/2021</p>
+                <h4 class="user_name">Laura Ragnarsdóttir</h4>
+                <p class="message_excerpt">I noticed that the file you handed in for.......</p>
+              </div>
+              <div></div>
+            </div>
+
+            <div class="message_wrapper">
+              <img class="user_image" src="av-assets/user_image.png" alt="user_image" />
+              <div class="message">
+                <p class="message_date">24/11/2021</p>
+                <h4 class="user_name">Laura Ragnarsdóttir</h4>
+                <p class="message_excerpt">Yes, you have to deliver your project by.......</p>
+              </div>
+              <div></div>
+            </div>
+            <div class="message_wrapper">
+              <img class="user_image" src="av-assets/user_image.png" alt="user_image" />
+              <div class="message">
+                <p class="message_date">24/11/2021</p>
+                <h4 class="user_name">Laura Ragnarsdóttir</h4>
+                <p class="message_excerpt">Yes, you have to deliver your project by.......</p>
+              </div>
+              <div></div>
+            </div>
+            <div class="message_wrapper">
+              <img class="user_image" src="av-assets/user_image.png" alt="user_image" />
+              <div class="message">
+                <p class="message_date">24/11/2021</p>
+                <h4 class="user_name">Laura Ragnarsdóttir</h4>
+                <p class="message_excerpt">Yes, you have to deliver your project by.......</p>
+              </div>
+              <div></div>
+            </div>
+            <div class="message_wrapper">
+              <img class="user_image" src="av-assets/user_image.png" alt="user_image" />
+              <div class="message">
+                <p class="message_date">24/11/2021</p>
+                <h4 class="user_name">Laura Ragnarsdóttir</h4>
+                <p class="message_excerpt">Yes, you have to deliver your project by.......</p>
+              </div>
+              <div></div>
+            </div>
+          </div>
+          <div class="column_wide">
+            <div class="chat_header">
+              <img class="backarrow" src="av-assets/backarrow.svg" alt="backarrow" />
+              <img src="av-assets/user_image.png" alt="sender_image" class="sender_image" />
+              <h3>Laura Ragnarsdóttir</h3>
+            </div>
+            <div class="active_chat chat_wrapper">
+              <div class="chat chat1">
+                <div class="message_a">
+                  <div class="messagebubble1">
+                    <p>
+                      Hello Sabrina! I noticed that the file you handed in for the GDD project is damaged. Please reupload the project. <br /><br />
+                      Best regards, Laura
+                    </p>
+                  </div>
+                </div>
+                <div class="message_b">
+                  <div class="messagebubble2">
+                    <p>Hello Laura. Ofcourse, I will reupload the file immediately. Thanks for letting me know!<br /><br />Best regards, Sabrina</p>
+                  </div>
+                </div>
+              </div>
+              <div class="chat chat1">
+                <div class="message_a">
+                  <div class="messagebubble1">
+                    <p>
+                      Hello Sabrina! I noticed that the file you handed in for the GDD project is damaged. Please reupload the project. <br /><br />
+                      Best regards, Laura
+                    </p>
+                  </div>
+                </div>
+                <div class="message_b">
+                  <div class="messagebubble2">
+                    <p>Hello Laura. Ofcourse, I will reupload the file immediately. Thanks for letting me know!<br /><br />Best regards, Sabrina</p>
+                  </div>
+                </div>
+              </div>
+
+              <div class="messagefield-wrapper">
+                <div class="message_icons">
+                  <!-- <div class="icon_placeholder"></div> -->
+                  <img src="av-assets/attach.svg" alt="" />
+                </div>
+                <div class="messagefield">
+                  <p>Aa</p>
+                </div>
+              </div>
+            </div>
+            <div class="empty_chat chat_wrapper">
+              <div class="messagefield-wrapper">
+                <div class="message_icons">
+                  <!-- <div class="icon_placeholder"></div> -->
+                  <img src="av-assets/attach.svg" alt="" />
+                </div>
+                <div class="messagefield">
+                  <p>Aa</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <script src="index.js"></script>
+    <script>
+      let newMessage = document.querySelector(".new_message");
+      function mediaQuery(x) {
+        if (x.matches) {
+          let clickableChat = document.querySelector(".clickable_chat");
+          let backArrow = document.querySelector(".backarrow");
+
+          clickableChat.addEventListener("click", () => {
+            document.querySelector(".column_wide").style.display = "unset";
+            document.querySelector(".column_narrow").style.display = "none";
+            document.querySelector(".clickable_chat").classList.remove("unopened_message");
+            document.querySelector(".purple_circle").style.display = "none";
+          });
+
+          backArrow.addEventListener("click", () => {
+            document.querySelector(".column_wide").style.display = "none";
+            document.querySelector(".column_narrow").style.display = "unset";
+          });
+
+          newMessage.addEventListener("click", () => {
+            document.querySelector(".column_wide").style.display = "unset";
+            document.querySelector(".column_narrow").style.display = "none";
+            document.querySelector(".active_chat").style.display = "none";
+            document.querySelector(".empty_chat").style.display = "unset";
+            document.querySelector(".chat_header h3").innerHTML = "To: ";
+            document.querySelector(".sender_image").style.display = "none";
+          });
+        } else {
+          newMessage.addEventListener("click", () => {
+            document.querySelector(".active_chat").style.display = "none";
+            document.querySelector(".empty_chat").style.display = "unset";
+            document.querySelector(".new_message_wrapper").style.display = "flex";
+            document.querySelector(".chat_header h3").innerHTML = "To: ";
+            document.querySelector(".chat_header").style.padding = "15px 10px";
+            document.querySelector(".sender_image").style.display = "none";
+          });
+        }
+      }
+      var x = window.matchMedia("(max-width: 767px)");
+      mediaQuery(x);
+      x.addListener(mediaQuery);
+    </script>
+  </body>
+</html>
