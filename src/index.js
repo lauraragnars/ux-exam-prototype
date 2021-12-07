@@ -1,11 +1,11 @@
-"use strict"
+'use strict'
 
-window.addEventListener("DOMContentLoaded", start)
+window.addEventListener('DOMContentLoaded', start)
 
-function start(){
-    const menuContainer = document.querySelector(".container")
+function start() {
+  const menuContainer = document.querySelector('.container')
 
-    const menu = `
+  const menu = `
     <p class="toggle-menu">☰</p>
     <div class="menu_container hide">
         <nav class="menu">
@@ -27,24 +27,43 @@ function start(){
             </div>
         </nav>
     </div>`
-    
-    menuContainer.insertAdjacentHTML('afterbegin', menu)
 
-    document.querySelector(".toggle-menu").addEventListener("click", toggleMenu)
+  menuContainer.insertAdjacentHTML('afterbegin', menu)
+
+  document.querySelector('.toggle-menu').addEventListener('click', toggleMenu)
 }
 
-function toggleMenu(){
-    const menu = document.querySelector(".menu_container")
+function toggleMenu() {
+  const menu = document.querySelector('.menu_container')
 
-    if (menu.classList.contains("show")){
-        this.textContent = "☰"
-        menu.classList.add("hide")
-        menu.classList.remove("show")
-    } else {
-        this.textContent = "X"
-        menu.classList.remove("hide")
-        menu.classList.add("show")
-    }
+  if (menu.classList.contains('show')) {
+    this.textContent = '☰'
+    menu.classList.add('hide')
+    menu.classList.remove('show')
+  } else {
+    this.textContent = 'X'
+    menu.classList.remove('hide')
+    menu.classList.add('show')
+  }
 }
-
-
+const student = document.getElementById('student')
+const teacher = document.getElementById('teacher')
+const studLog = document.getElementById('studentLogin')
+const teachLog = document.getElementById('teacherLogin')
+const divStud = document.getElementById('login_student')
+const divTeach = document.getElementById('login_teacher')
+student.addEventListener('click', toggleLogin)
+teacher.addEventListener('click', toggleLogin)
+function toggleLogin() {
+  if (studLog.classList.contains('hidden')) {
+    studLog.classList.remove('hidden')
+    teachLog.classList.add('hidden')
+    divStud.classList.add('active')
+    divTeach.classList.remove('active')
+  } else if (teachLog.classList.contains('hidden')) {
+    studLog.classList.add('hidden')
+    teachLog.classList.remove('hidden')
+    divTeach.classList.add('active')
+    divStud.classList.remove('active')
+  }
+}

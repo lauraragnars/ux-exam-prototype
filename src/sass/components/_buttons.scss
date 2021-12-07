@@ -19,6 +19,9 @@ button,
     background-color: rgba($color-main, 0.5);
     cursor: not-allowed;
   }
+  &.hidden{
+    display: none;
+  }
 }
 .calendar_button {
   font-family: $font-family;
