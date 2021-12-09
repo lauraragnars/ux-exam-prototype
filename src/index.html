@@ -10,18 +10,19 @@
     <div class="login_container">
       <div class="login_modal">
         <h3>Login</h3>
-        <!-- <div class="login_flex">
-          <div>
-            <h4>Teacher</h4>
+        <div class="login_flex">
+          <div id="login_teacher">
+            <h4 id="teacher">Teacher</h4>
           </div>
-          <div>
-            <h4>Student</h4>
+          <div id="login_student" class="active">
+            <h4 id="student" >Student</h4>
           </div>
-        </div> -->
+        </div>
         <form onsubmit="return false">
           <input type="email" name="name" id="name" placeholder="Email address" />
           <input type="password" name="password" id="password" placeholder="Password" />
-          <a class="button" href="dashboard.html">Login</a>
+          <a id="studentLogin" class="button" href="dashboard.html">Login Student</a>
+          <a id="teacherLogin" class="button hidden" href="#">Login Teacher</a>
         </form>
       </div>
     </div>

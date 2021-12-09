@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="styles.css">
+    <title>UX - Prototype</title>
+  </head>
+  <body id="calendar">
+    <div class="container calendar_container">
+     
+      <div class="content_container">
+        <div class="top_navbar">
+          <img class="bell" src="./assets/icons/notification.svg" alt="Notification bell">
+          <img class="photo" src="./assets/profilepicture.png" alt="Profile picture">
+          <p>Anna Smith</p>
+        </div>
+        <div class="month">
+          <span class="left calendar_button" id="prev"> &lang; </span> 
+          <h1>September 2021</h1>
+          <span class="right calendar_button" id="next"> &rang; </span>
+        </div>
+        <div id="cal">
+          <table id="days">
+            <td>sun</td> 
+            <td>mon</td> 
+            <td>tue</td> 
+            <td>wed</td> 
+            <td>thu</td> 
+            <td>fri</td> 
+            <td>sat</td>
+          </table>
+          <div id="cal-frame">
+            <table class="curr"> 
+              <tbody> 
+                  <tr>
+                    <td class="nil"></td>
+                    <td class="nil"></td>
+                    <td>1
+                      <div class="calendar_events">
+                        <div class="calendar_event">
+                          <div class="calendar_dot"></div>
+                          <div class="calendar_name">GDD4 Project</div>
+                        </div>
+                        <div class="calendar_timeof">10:00</div>
+                      </div>
+                    </td>
+                    <td>2<div class="calendar_events">
+                      <div class="calendar_event">
+                        <div class="calendar_dot"></div>
+                        <div class="calendar_name">User Experience</div>
+                      </div>
+                      <div class="calendar_timeof">08:00</div>
+                    </div></td>
+                    <td>3</td>
+                    <td>4<div class="calendar_events">
+                      <div class="calendar_event">
+                        <div class="calendar_dot"></div>
+                        <div class="calendar_name">Web Development</div>
+                      </div>
+                      <div class="calendar_timeof">08:00</div>
+                    </div></td>
+                    <td>5</td>
+                  </tr> 
+                  <tr><td>6</td><td>7<div class="calendar_events">
+                    <div class="calendar_event">
+                      <div class="calendar_dot"></div>
+                      <div class="calendar_name">Databases</div>
+                    </div>
+                    <div class="calendar_timeof">08:00</div>
+                  </div></td><td>8</td><td>9<div class="calendar_events">
+                    <div class="calendar_event">
+                      <div class="calendar_dot"></div>
+                      <div class="calendar_name">User Experience</div>
+                    </div>
+                    <div class="calendar_timeof">08:00</div>
+                  </div></td><td>10</td><td>11<div class="calendar_events">
+                    <div class="calendar_event">
+                      <div class="calendar_dot"></div>
+                      <div class="calendar_name">Web Development</div>
+                    </div>
+                    <div class="calendar_timeof">08:00</div>
+                  </div></td><td>12</td></tr> 
+                  <tr><td>13</td><td>14<div class="calendar_events">
+                    <div class="calendar_event">
+                      <div class="calendar_dot"></div>
+                      <div class="calendar_name">Databases</div>
+                    </div>
+                    <div class="calendar_timeof">08:00</div>
+                  </div></td><td>15</td><td>16<div class="calendar_events">
+                    <div class="calendar_event">
+                      <div class="calendar_dot"></div>
+                      <div class="calendar_name">User Experience</div>
+                    </div>
+                    <div class="calendar_timeof">08:00</div>
+                  </div></td><td>17</td><td>18<div class="calendar_events">
+                    <div class="calendar_event">
+                      <div class="calendar_dot"></div>
+                      <div class="calendar_name">Web Development</div>
+                    </div>
+                    <div class="calendar_timeof">08:00</div>
+                  </div></td><td>19</td></tr> 
+                  <tr><td>20</td><td>21<div class="calendar_events">
+                    <div class="calendar_event">
+                      <div class="calendar_dot"></div>
+                      <div class="calendar_name">Databases</div>
+                    </div>
+                    <div class="calendar_timeof">08:00</div>
+                  </div></td><td>22</td><td>23<div class="calendar_events">
+                    <div class="calendar_event">
+                      <div class="calendar_dot"></div>
+                      <div class="calendar_name">User Experience</div>
+                    </div>
+                    <div class="calendar_timeof">08:00</div>
+                  </div></td>
+                    <td>
+                      <span class="current_day">24</span><br>
+                      <div class="calendar_events">
+                        <div class="calendar_event">
+                          <div class="calendar_dot"></div>
+                          <div class="calendar_name">GDD5 Project</div>
+                        </div>
+                        <div class="calendar_timeof">10:00</div>
+                      </div>
+                    </td><td>25<div class="calendar_events">
+                      <div class="calendar_event">
+                        <div class="calendar_dot"></div>
+                        <div class="calendar_name">Web Development</div>
+                      </div>
+                      <div class="calendar_timeof">08:00</div>
+                    </div></td><td>26</td></tr> 
+                  <tr><td>27</td><td>28<div class="calendar_events">
+                    <div class="calendar_event">
+                      <div class="calendar_dot"></div>
+                      <div class="calendar_name">Databases</div>
+                    </div>
+                    <div class="calendar_timeof">08:00</div>
+                  </div></td><td>29</td><td>30<div class="calendar_events">
+                    <div class="calendar_event">
+                      <div class="calendar_dot"></div>
+                      <div class="calendar_name">User Experience</div>
+                    </div>
+                    <div class="calendar_timeof">08:00</div>
+                  </div></td><td class="nil"></td><td class="nil"></td><td class="nil"></td></tr> 
+              </tbody> 
+          </table>
+          </div>
+          <div class="mobile_calendar">
+            <h3>Today</h3>
+            <div class="calendar_events">
+              <div class="calendar_event">
+                <div class="calendar_dot"></div>
+                <div class="calendar_name"><p>GDD4 Project</p></div>
+              </div>
+              <div class="calendar_timeof"><p>10:00</p></div>
+            </div>
+          </div>
+        </div>
+    </div>
+    <script src="index.js"></script>
+  </body>
+</html>

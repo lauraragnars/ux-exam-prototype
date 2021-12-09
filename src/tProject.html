@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="styles.css" />
+    <title>UX - Prototype</title>
+  </head>
+  <body id="project">
+    <div class="container participants_container">
+      <div class="content_container">
+        <div class="top_navbar">
+          <img
+            class="bell"
+            src="./assets/icons/notification.svg"
+            alt="Notification bell"
+          />
+          <img
+            class="photo"
+            src="./assets/profilepicture.png"
+            alt="Profile picture"
+          />
+          <p>Anna Smith</p>
+        </div>
+
+        <div class="inner_container">
+          <div class="column column_wide">
+            <div class="section projects">
+              <div class="subsection project">
+                <h1>Project name</h1>
+                <div class="pDescription">
+                  <p>
+                    The First Mandatory Assignment will be developed in groups
+                    of 4 students.It will consist in:
+                  </p>
+                <ul>
+                  <li>
+                    Deliveringto Fronter the exercises related to each phase
+                    of Goal-Directed Design(except for the research phase),
+                    whichthe group will apply to the website idea of their
+                    choice.
+                  </li>
+                  <li>
+                    Presenting the whole process to the rest of the class.
+                  </li>
+                </ul>
+
+                  <h5>Business situation</h5>
+                  <p>
+                    Each group of students is a new web development startup.
+                  </p>
+                  <h5>Problem statement overview</h5>
+                  <p>
+                    Competitor websites have pain points that prevent users from
+                    experiencing 100% satisfaction(these pain points should be
+                    identified).
+                  </p>
+                  <h5>Vision statement overview</h5>
+                  <p>
+                    The startup will become one of the world’s top three
+                    providers in their subject area within three years.
+                  </p>
+                </div>
+                <div class="pDocuments">
+                  <p>Documents</p>
+                </div>
+              </div>
+              <div class="subsection project">
+                  <h2>Hand-in</h2>
+                  <input type="file" id="file">
+                  <input type="text" id="pComment" placeholder="Write a comment">
+                  <button id="editBtn" class="hidden">Edit</button>
+                  <button class="" id="handin-btn">Hand in</button>
+                
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <script src="index.js"></script>
+    <script src="project.js"></script>
+  </body>
+</html>
