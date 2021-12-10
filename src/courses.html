@@ -24,160 +24,145 @@
       </div>
     </div>
     <div class="container courses_container">
+      <p class="toggle-menu">☰</p>
+      <div class="menu_container hide">
+        <nav class="menu">
+          <div class="menu_top">
+            <img src="./assets/icons/logo.svg" alt="Icon" />
+          </div>
+          <ul class="menuitems">
+            <li><img src="./assets/icons/outline/home.svg" alt="Icon" /><a href="dashboard.html">Dashboard</a></li>
+            <li class="selected"><img src="./assets/icons/filled/category.svg" alt="Icon" /><a href="courses.html">Courses</a></li>
+            <li><img src="./assets/icons/outline/chart.svg" alt="Icon" /><a href="plans.html">Plans</a></li>
+            <li><img src="./assets/icons/outline/calendar.svg" alt="Icon" /><a href="calendar.html">Calendar</a></li>
+            <li><img src="./assets/icons/outline/infosquare.svg" alt="Icon" /><a href="announcements.html">Announcements</a></li>
+            <li><img src="./assets/icons/outline/paper.svg" alt="Icon" /><a href="messages.html">Messages</a></li>
+          </ul>
+          <div class="menu_bottom">
+            <img src="./assets/icons/outline/logout.svg" alt="Icon" />
+            <a href="index.html">Logout</a>
+          </div>
+        </nav>
+      </div>
       <div class="content_container">
         <div class="top_navbar">
-          <img
-            class="bell"
-            src="./assets/icons/notification.svg"
-            alt="Notification bell"
-          />
-          <img
-            class="photo"
-            src="./assets/profilepicture.png"
-            alt="Profile picture"
-          />
+          <img class="bell" src="./assets/icons/notification.svg" alt="Notification bell" />
+          <img class="photo" src="./assets/profilepicture.png" alt="Profile picture" />
           <p>Anna Smith</p>
         </div>
         <div class="wrapper">
           <h1>Courses</h1>
           <div class="submenu">
             <ul class="submenu_items">
-              <li data-course="ux" class="ux_menu submenu_item">UX</li>
-              <li data-course="wd" class="wd_menu submenu_item">
-                Web Development
-              </li>
-              <li data-course="db" class="db_menu submenu_item">
-                Databases
-              </li>
+              <li>All Courses</li>
+              <li>Projects</li>
+              <li>Tasks</li>
+              <li>Exams</li>
             </ul>
           </div>
-          <div class="inner_container">
-            <div class="column column_wide">
-              <div class="section courses">
-                <h3 class="subheader">Projects</h3>
-                <div class="projects">
-                  <div class="project ux">
-                    <a href="project.html"><h3>UX 1</h3></a>
-                  </div>
-                  <div class="project ux">
-                    <a href="project.html"><h3>UX 2</h3></a>
-                  </div>
-                  <div class="project db">
-                    <a href="project.html"><h3>DB 1</h3></a>
-                  </div>
-                  <div class="project wd">
-                    <a href="project.html"><h3>WD 1</h3></a>
-                  </div>
-                  <div class="project wd">
-                    <a href="project.html"><h3>WD 2</h3></a>
-                  </div>
-                  <div class="project teacherView">
-                    <a href="ux.html"><h3>+</h3></a>
-                  </div>
-                  
+
+          <!-- <div class="section grades">
+              <h3 class="subheader">Grades</h3>
+              <div class="subsection grades">
+                <div class="noGrade hidden">
+                  <h3>There are no grades to show at the moment.</h3>
+                </div>
+                <div class="grade ux">
+                  <h3>UX 1.Project</h3>
+                  <h4>
+                    <a href="#open-feedback-modal"> Feedback available </a>
+                  </h4>
+                  <h5>80%</h5>
+                </div>
+                <div class="grade wd">
+                  <h3>WD 1.Project</h3>
+                  <h4>
+                    <a href="#open-feedback-modal"> Feedback available </a>
+                  </h4>
+                  <h5>Confirmed</h5>
+                </div>
+                <div class="grade db">
+                  <h3>DB 2.Project</h3>
+                  <h4>
+                    <a href="#open-feedback-modal"> Feedback available </a>
+                  </h4>
+                  <h5>80%</h5>
                 </div>
               </div>
-              <div class="section grades">
-                <h3 class="subheader">Grades</h3>
-                <div class="subsection grades">
-                  <div class="noGrade hidden">
-                    <h3>There are no grades to show at the moment.</h3>
-                  </div>
-                  <div class="grade ux">
-                    <h3>UX 1.Project</h3>
-                    <h4>
-                      <a href="#open-feedback-modal">
-                        Feedback available
-                      </a>
-                    </h4>
-                    <h5>80%</h5>
-                  </div>
-                  <div class="grade wd">
-                    <h3>WD 1.Project</h3>
-                    <h4>
-                      <a href="#open-feedback-modal">
-                        Feedback available
-                      </a>
-                    </h4>
-                    <h5>Confirmed</h5>
-                  </div>
-                  <div class="grade db">
-                    <h3>DB 2.Project</h3>
-                    <h4>
-                      <a href="#open-feedback-modal">
-                        Feedback available
-                      </a>
-                    </h4>
-                    <h5>80%</h5>
-                  </div>
-                </div>
-              </div>
+            </div> -->
+
+          <div class="section tasks">
+            <div class="noTasks hidden">
+              <h3>You have no tasks</h3>
+              <h4>Select a course to see more tasks</h4>
             </div>
-            <div class="column column_narrow">
-              <div class="section tasks">
-                <h3 class="subheader">Upcoming tasks</h3>
-                <div class="tasks subsection">
-                  <div class="noTasks hidden">
-                    <h3>You have no tasks</h3>
-                    <h4>Select a course to see more tasks</h4>
+            <div class="table_headers">
+              <ul>
+                <li>Dato</li>
+                <li>Project</li>
+                <li>Hand-in status</li>
+                <li>Feedback</li>
+                <li>Grade</li>
+              </ul>
+            </div>
+            <div class="task">
+              <ul>
+                <li class="task ux">
+                  <div>
+                    <h3>
+                      <span>13.</span>
+                      <br />
+                      Sept
+                    </h3>
                   </div>
-                  <div class="task">
-                    <ul>
-                      <li class="task ux">
-                        <div>
-                          <h3>
-                            <span>13</span>
-                            <br />
-                            Sept
-                          </h3>
-                        </div>
-                        <a href="project.html">
-                          <h4 class="blue">First Mandatory </h4>
-                          <h4 class="gray">User experience</h4>
-                          <p>This is your first mandatory project</p>
-                        </a>
-                        <div>
-                          <p>></p>
-                        </div>
-                      </li>
-                      <li class="task db">
-                        <div>
-                          <h3>
-                            <span>13</span>
-                            <br />
-                            Sept
-                          </h3>
-                        </div>
-                        <a href="#open-task-modal">
-                          <h4 class="orange">Reading material</h4>
-                          <h4 class="gray">Databases</h4>
-                          <p>blablabla</p>
-                        </a>
-                        <div>
-                          <p>></p>
-                        </div>
-                      </li>
-                      <li class="task wd">
-                        <div>
-                          <h3>
-                            <span>15</span>
-                            <br />
-                            Sept
-                          </h3>
-                        </div>
-                        <a href="#open-task-modal">
-                          <h4 class="purple">Reading material</h4>
-                          <h4 class="gray">Web Development</h4>
-                          <p>blablabla</p>
-                        </a>
-                        <div>
-                          <p>></p>
-                        </div>
-                      </li>
-                    </ul>
+                  <div>
+                    <h4 class="blue">User experience</h4>
+                    <p>GDD 4 Framework Exercise</p>
                   </div>
-                </div>
-              </div>
+
+                  <div class="handin_status">
+                    <p>Completed</p>
+                  </div>
+                  <div>
+                    <p>Available</p>
+                  </div>
+                  <div><p>Passed</p></div>
+                </li>
+                <li class="task db">
+                  <div>
+                    <h3>
+                      <span>13</span>
+                      <br />
+                      Sept
+                    </h3>
+                  </div>
+                  <a href="#open-task-modal">
+                    <h4 class="orange">Reading material</h4>
+                    <h4 class="gray">Databases</h4>
+                    <p>blablabla</p>
+                  </a>
+                  <div>
+                    <p>></p>
+                  </div>
+                </li>
+                <li class="task wd">
+                  <div>
+                    <h3>
+                      <span>15</span>
+                      <br />
+                      Sept
+                    </h3>
+                  </div>
+                  <a href="#open-task-modal">
+                    <h4 class="purple">Reading material</h4>
+                    <h4 class="gray">Web Development</h4>
+                    <p>blablabla</p>
+                  </a>
+                  <div>
+                    <p>></p>
+                  </div>
+                </li>
+              </ul>
             </div>
           </div>
         </div>
