@@ -54,43 +54,24 @@
           <h1>Courses</h1>
           <div class="submenu">
             <ul class="submenu_items">
-              <li>All Courses</li>
+              <li>
+                <div class="dropdown">
+                  <div class="dropbtn">
+                    All courses
+                    <span class="downarrow"><img src="./assets/icons/outline/downarrow.svg" alt="" /></span>
+                  </div>
+                  <div class="dropdown-content">
+                    <a href="#">User Experience</a>
+                    <a href="#">Databases</a>
+                    <a href="#">Web Development</a>
+                  </div>
+                </div>
+              </li>
               <li>Projects</li>
               <li>Tasks</li>
               <li>Exams</li>
             </ul>
           </div>
-
-          <!-- <div class="section grades">
-              <h3 class="subheader">Grades</h3>
-              <div class="subsection grades">
-                <div class="noGrade hidden">
-                  <h3>There are no grades to show at the moment.</h3>
-                </div>
-                <div class="grade ux">
-                  <h3>UX 1.Project</h3>
-                  <h4>
-                    <a href="#open-feedback-modal"> Feedback available </a>
-                  </h4>
-                  <h5>80%</h5>
-                </div>
-                <div class="grade wd">
-                  <h3>WD 1.Project</h3>
-                  <h4>
-                    <a href="#open-feedback-modal"> Feedback available </a>
-                  </h4>
-                  <h5>Confirmed</h5>
-                </div>
-                <div class="grade db">
-                  <h3>DB 2.Project</h3>
-                  <h4>
-                    <a href="#open-feedback-modal"> Feedback available </a>
-                  </h4>
-                  <h5>80%</h5>
-                </div>
-              </div>
-            </div> -->
-
           <div class="section tasks">
             <div class="noTasks hidden">
               <h3>You have no tasks</h3>
@@ -127,39 +108,56 @@
                     <p>Available</p>
                   </div>
                   <div><p>Passed</p></div>
+                  <div>
+                    <button>Go to project</button>
+                  </div>
                 </li>
                 <li class="task db">
                   <div>
                     <h3>
-                      <span>13</span>
+                      <span>15.</span>
                       <br />
                       Sept
                     </h3>
                   </div>
-                  <a href="#open-task-modal">
-                    <h4 class="orange">Reading material</h4>
-                    <h4 class="gray">Databases</h4>
-                    <p>blablabla</p>
-                  </a>
                   <div>
-                    <p>></p>
+                    <h4 class="orange">Databases</h4>
+                    <p>MongoDB Exercise</p>
+                  </div>
+
+                  <div class="handin_status">
+                    <p>Completed</p>
+                  </div>
+                  <div>
+                    <p>Available</p>
+                  </div>
+                  <div><p>Passed</p></div>
+                  <div>
+                    <button>Go to project</button>
                   </div>
                 </li>
                 <li class="task wd">
                   <div>
                     <h3>
-                      <span>15</span>
+                      <span>15.</span>
                       <br />
                       Sept
                     </h3>
                   </div>
-                  <a href="#open-task-modal">
-                    <h4 class="purple">Reading material</h4>
-                    <h4 class="gray">Web Development</h4>
-                    <p>blablabla</p>
-                  </a>
                   <div>
-                    <p>></p>
+                    <h4 class="purple">Web Development</h4>
+                    <p>PHP Project 2</p>
+                  </div>
+
+                  <div class="handin_status">
+                    <p>Not Completed</p>
+                  </div>
+                  <div>
+                    <p>Not Available</p>
+                  </div>
+                  <div><p>Not Available</p></div>
+                  <div>
+                    <button>Go to project</button>
                   </div>
                 </li>
               </ul>

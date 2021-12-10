@@ -32,6 +32,55 @@
         transition: 0.3s;
       }
     }
+    /* Dropdown Button */
+    .dropbtn {
+      display: flex;
+      align-items: center;
+      span {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+      }
+    }
+
+    /* The container <div> - needed to position the dropdown content */
+    .dropdown {
+      position: relative;
+      display: inline-block;
+    }
+
+    /* Dropdown Content (Hidden by Default) */
+    .dropdown-content {
+      display: none;
+      position: absolute;
+      background-color: #f1f1f1;
+      min-width: 160px;
+      box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+      z-index: 1;
+    }
+
+    /* Links inside the dropdown */
+    .dropdown-content a {
+      color: black;
+      padding: 12px 16px;
+      text-decoration: none;
+      display: block;
+    }
+
+    /* Change color of dropdown links on hover */
+    .dropdown-content a:hover {
+      background-color: #ddd;
+    }
+
+    /* Show the dropdown menu on hover */
+    .dropdown:hover .dropdown-content {
+      display: block;
+    }
+
+    /* Change the background color of the dropdown button when the dropdown content is shown */
+    .dropdown:hover .dropbtn {
+      background-color: #3e8e41;
+    }
   }
   .projects {
     display: flex;
@@ -42,27 +91,7 @@
     .hidden {
       display: none;
     }
-    .ux {
-      background-color: $color-blue-tint;
-      h3 {
-        color: $color-blue;
-        font-weight: 300;
-      }
-    }
-    .db {
-      background-color: $color-orange-tint;
-      h3 {
-        color: $color-orange;
-        font-weight: 300;
-      }
-    }
-    .wd {
-      background-color: $color-purple-tint;
-      h3 {
-        color: $color-purple;
-        font-weight: 300;
-      }
-    }
+
     .teacherView {
       background-color: $color-light-gray;
       h3 {
@@ -101,21 +130,22 @@
       display: none;
     }
     ul {
-      padding: 1.2rem;
+      padding: 0 1.2rem;
+
       .ux {
-        background-color: $color-blue-tint;
+        box-shadow: $box-shadow;
         .blue {
           color: $color-blue;
         }
       }
       .db {
-        background-color: $color-orange-tint;
+        box-shadow: $box-shadow;
         .orange {
           color: $color-orange;
         }
       }
       .wd {
-        background-color: $color-purple-tint;
+        box-shadow: $box-shadow;
         .purple {
           color: $color-purple;
         }
@@ -128,11 +158,11 @@
           font-family: $font-family;
           padding: 1rem;
           display: grid;
-          grid-template-columns: 1fr 2fr 3fr 2fr 2fr;
+          grid-template-columns: 1fr 3fr 2fr 2fr 2fr 2fr;
           gap: 1rem;
           margin: 1rem;
           // justify-content: space-between;
-          // align-items: center;
+          align-items: center;
           span {
             font-size: 2rem;
           }
@@ -169,9 +199,12 @@
     }
     .table_headers {
       margin: 1.2rem;
+      color: $color-purple;
+      text-transform: uppercase;
+      font-size: 12px;
       ul {
         display: grid;
-        grid-template-columns: 1fr 2fr 3fr 2fr 2fr;
+        grid-template-columns: 1fr 3fr 2fr 2fr 2fr 2fr;
         border-radius: $border-radius;
         font-family: $font-family;
 
@@ -179,26 +212,6 @@
         margin: 1rem;
         gap: 1rem;
       }
-    }
-  }
-
-  .grades {
-    width: auto;
-    border-radius: $border-radius;
-    background-color: $color-off-white;
-
-    .grade {
-      display: grid;
-      grid-template-columns: 2fr 3fr 1fr;
-      // justify-content: space-between;
-      padding: 1rem;
-      a {
-        text-decoration: none;
-        color: $color-medium-gray;
-      }
-    }
-    .hidden {
-      display: none;
     }
   }
 
