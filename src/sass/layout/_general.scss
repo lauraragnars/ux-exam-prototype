@@ -144,7 +144,7 @@
 
     @media (min-width: 900px) {
       flex-grow: 1;
-      flex-basis: 200px;
+      flex-basis: 160px;
       position: relative;
       height: 100vh;
     }
@@ -205,5 +205,12 @@
         margin-left: 10px;
       }
     }
+  }
+
+  .hidden {
+    display: none;
+  }
+  .underline {
+    text-decoration: underline;
   }
 }
