@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="styles.css" />
+    <title>UX - Prototype</title>
+  </head>
+  <body id="courses">
+    <div id="open-task-modal" class="modal-window">
+      <div>
+        <a href="#" title="Close" class="modal-close">Close</a>
+        <h3>Assignment</h3>
+        <h4>Course</h4>
+        <p>Blablablablabla</p>
+      </div>
+    </div>
+    <div id="open-feedback-modal" class="modal-window">
+      <div>
+        <a href="#" title="Close" class="modal-close">Close</a>
+        <h3>Feedback</h3>
+        <h4>Project name</h4>
+        <p>VERY good job! Just remember to use the variables ALL the time :P</p>
+      </div>
+    </div>
+    <div class="container courses_container">
+      <p class="toggle-menu">☰</p>
+      <div class="menu_container hide">
+        <nav class="menu">
+          <div class="menu_top">
+            <img src="./assets/icons/logo.svg" alt="Icon" />
+          </div>
+          <ul class="menuitems">
+            <li>
+              <img src="./assets/icons/outline/home.svg" alt="Icon" />
+              <a href="tDashboard.html">Dashboard</a>
+            </li>
+            <li class="selected">
+              <img src="./assets/icons/filled/category.svg" alt="Icon" />
+              <a href="tCourses.html">Courses</a>
+            </li>
+            <li>
+              <img src="./assets/icons/outline/chart.svg" alt="Icon" />
+              <a href="tPlans.html">Plans</a>
+            </li>
+            <li>
+              <img src="./assets/icons/outline/calendar.svg" alt="Icon" />
+              <a href="tCalendar.html">Calendar</a>
+            </li>
+            <li>
+              <img src="./assets/icons/outline/infosquare.svg" alt="Icon" />
+              <a href="tAnnouncements.html">Announcements</a>
+            </li>
+            <li>
+              <img src="./assets/icons/outline/paper.svg" alt="Icon" />
+              <a href="tMessages.html">Messages</a>
+            </li>
+          </ul>
+          <div class="menu_bottom">
+            <img src="./assets/icons/outline/logout.svg" alt="Icon" />
+            <a href="index.html">Logout</a>
+          </div>
+        </nav>
+      </div>
+      <div class="content_container">
+        <div class="top_navbar">
+          <img
+            class="bell"
+            src="./assets/icons/notification.svg"
+            alt="Notification bell"
+          />
+          <img
+            class="photo"
+            src="./assets/profilepicture.png"
+            alt="Profile picture"
+          />
+          <p>Anna Smith</p>
+        </div>
+        <div class="wrapper">
+          <h1>Courses</h1>
+          <div class="submenu">
+            <ul class="submenu_items">
+              <li>
+                <div class="dropdown">
+                  <div class="dropbtn">
+                    All courses
+                    <span class="downarrow">
+                      <img src="./assets/icons/outline/downarrow.svg" alt="" />
+                    </span>
+                  </div>
+                  <div class="dropdown-content">
+                    <a href="#">User Experience</a>
+                    <a href="#">Databases</a>
+                    <a href="#">Web Development</a>
+                  </div>
+                </div>
+              </li>
+              <li>Projects</li>
+              <li>Tasks</li>
+              <li>Exams</li>
+            </ul>
+          </div>
+          <div class="tasks">
+            <div class="noTasks hidden">
+              <h3>You have no tasks</h3>
+              <h4>Select a course to see more tasks</h4>
+            </div>
+            <div class="table_headers">
+              <ul>
+                <li>Dato</li>
+                <li>Project</li>
+                <li>Hand-in status</li>
+                <li>Feedback</li>
+                <li>Grade</li>
+              </ul>
+            </div>
+            <div class="task">
+              <ul>
+                <li class="task ux">
+                  <div>
+                    <h3>
+                      <span>13.</span>
+                      <br />
+                      Sept
+                    </h3>
+                  </div>
+                  <div>
+                    <p class="blue">User experience</p>
+                    <h4>GDD 4 Framework Exercise</h4>
+                  </div>
+
+                  <div class="handin_status">
+                    <p>Completed</p>
+                  </div>
+                  <div>
+                    <p>Available</p>
+                  </div>
+                  <div><p>Passed</p></div>
+                  <div>
+                    <button>Go to project</button>
+                  </div>
+                </li>
+                <li class="task db">
+                  <div>
+                    <h3>
+                      <span>15.</span>
+                      <br />
+                      Sept
+                    </h3>
+                  </div>
+                  <div>
+                    <p class="orange">Databases</p>
+                    <h4>MongoDB Exercise</h4>
+                  </div>
+
+                  <div class="handin_status">
+                    <p>Completed</p>
+                  </div>
+                  <div>
+                    <p>Available</p>
+                  </div>
+                  <div><p>Passed</p></div>
+                  <div>
+                    <button>Go to project</button>
+                  </div>
+                </li>
+                <li class="task wd">
+                  <div>
+                    <h3>
+                      <span>15.</span>
+                      <br />
+                      Sept
+                    </h3>
+                  </div>
+                  <div>
+                    <p class="purple">Web Development</p>
+                    <h4>PHP Project 2</h4>
+                  </div>
+
+                  <div class="handin_status">
+                    <p>Not Completed</p>
+                  </div>
+                  <div>
+                    <p>Not Available</p>
+                  </div>
+                  <div><p>Not Available</p></div>
+                  <div>
+                    <button>Go to project</button>
+                  </div>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <script src="index.js"></script>
+    <script src="courses.js"></script>
+  </body>
+</html>

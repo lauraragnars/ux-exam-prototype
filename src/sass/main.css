@@ -112,6 +112,11 @@ button.disabled,
   cursor: not-allowed;
 }
 
+button.hidden,
+.button.hidden {
+  display: none;
+}
+
 .calendar_button {
   font-family: "Outfit", sans-serif;
   padding: 1rem;
@@ -182,8 +187,9 @@ button.disabled,
 }
 
 .container .menu {
+  width: 100%;
   height: 100%;
-  padding: 2rem;
+  padding: 2rem 0 2rem 2rem;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -200,6 +206,16 @@ button.disabled,
   -webkit-box-align: start;
       -ms-flex-align: start;
           align-items: start;
+  position: fixed;
+  left: 0;
+  top: 0;
+  z-index: 1000;
+}
+
+@media (min-width: 900px) {
+  .container .menu {
+    width: auto;
+  }
 }
 
 .container .menu .menu_bottom {
@@ -283,8 +299,6 @@ button.disabled,
 
 .container .menu_container {
   width: 100%;
-  height: 100vh;
-  position: fixed;
 }
 
 @media (min-width: 900px) {
@@ -295,6 +309,7 @@ button.disabled,
     -ms-flex-preferred-size: 200px;
         flex-basis: 200px;
     position: relative;
+    height: 100vh;
   }
 }
 
@@ -330,9 +345,9 @@ button.disabled,
 .container .content_container {
   width: 100%;
   height: 100vh;
-  -webkit-box-flex: 9;
-      -ms-flex-positive: 9;
-          flex-grow: 9;
+  -webkit-box-flex: 3;
+      -ms-flex-positive: 3;
+          flex-grow: 3;
   -ms-flex-preferred-size: 600px;
       flex-basis: 600px;
 }
@@ -392,6 +407,8 @@ button.disabled,
 #courses .submenu {
   justify-self: flex-start;
   margin: 0 3rem;
+  /* Dropdown Button */
+  /* The container <div> - needed to position the dropdown content */
 }
 
 #courses .submenu ul {
@@ -421,24 +438,61 @@ button.disabled,
   transition: 0.3s;
 }
 
-#courses .submenu ul li:nth-child(1) {
-  background-color: #e7f8ff;
-  color: #3d9be2;
+#courses .submenu .dropdown {
+  position: relative;
+  display: inline-block;
+  /* Links inside the dropdown */
+  /* Change color of dropdown links on hover */
+  /* Show the dropdown menu on hover */
+  /* Change the background color of the dropdown button when the dropdown content is shown */
 }
 
-#courses .submenu ul li:nth-child(2) {
-  background-color: #f0e8fc;
-  color: #713fdb;
+#courses .submenu .dropdown .dropbtn {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
 }
 
-#courses .submenu ul li:nth-child(3) {
-  background-color: #ffeee4;
-  color: #f8835e;
+#courses .submenu .dropdown .dropbtn span {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
 }
 
-#courses .submenu ul li.disabled {
-  background-color: #f1f1f1;
-  color: #bdbdbd;
+#courses .submenu .dropdown .dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: #fefefe;
+  min-width: 160px;
+  -webkit-box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+          box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+  z-index: 1;
+}
+
+#courses .submenu .dropdown .dropdown-content a {
+  padding: 12px 16px;
+  text-decoration: none;
+  font-weight: 200;
+  font-size: 0.8rem;
+  display: block;
+}
+
+#courses .submenu .dropdown .dropdown-content a:hover {
+  background-color: #713fdb;
+  color: #fefefe;
+}
+
+#courses .submenu .dropdown:hover .dropdown-content {
+  display: block;
 }
 
 #courses .projects {
@@ -455,33 +509,6 @@ button.disabled,
 
 #courses .projects .hidden {
   display: none;
-}
-
-#courses .projects .ux {
-  background-color: #e7f8ff;
-}
-
-#courses .projects .ux h3 {
-  color: #3d9be2;
-  font-weight: 300;
-}
-
-#courses .projects .db {
-  background-color: #ffeee4;
-}
-
-#courses .projects .db h3 {
-  color: #f8835e;
-  font-weight: 300;
-}
-
-#courses .projects .wd {
-  background-color: #f0e8fc;
-}
-
-#courses .projects .wd h3 {
-  color: #713fdb;
-  font-weight: 300;
 }
 
 #courses .projects .teacherView {
@@ -528,11 +555,12 @@ button.disabled,
 }
 
 #courses .tasks ul {
-  padding: 1.2rem;
+  padding: 0 1.2rem;
 }
 
 #courses .tasks ul .ux {
-  background-color: #e7f8ff;
+  -webkit-box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+          box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
 }
 
 #courses .tasks ul .ux .blue {
@@ -540,7 +568,8 @@ button.disabled,
 }
 
 #courses .tasks ul .db {
-  background-color: #ffeee4;
+  -webkit-box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+          box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
 }
 
 #courses .tasks ul .db .orange {
@@ -548,86 +577,73 @@ button.disabled,
 }
 
 #courses .tasks ul .wd {
-  background-color: #f0e8fc;
+  -webkit-box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+          box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
 }
 
 #courses .tasks ul .wd .purple {
   color: #713fdb;
 }
 
-#courses .tasks ul li {
+#courses .tasks .task ul li {
   border-radius: 20px;
   font-family: "Outfit", sans-serif;
   padding: 1rem;
   display: -ms-grid;
   display: grid;
-  -ms-grid-columns: 1fr 5fr 0.5fr;
-      grid-template-columns: 1fr 5fr 0.5fr;
+  -ms-grid-columns: 1fr 3fr 2fr 2fr 2fr 2fr;
+      grid-template-columns: 1fr 3fr 2fr 2fr 2fr 2fr;
   gap: 1rem;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
+  margin: 1rem;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
 }
 
-#courses .tasks ul li span {
+#courses .tasks .task ul li span {
   font-size: 2rem;
 }
 
-#courses .tasks ul li .blue,
-#courses .tasks ul li .purple,
-#courses .tasks ul li .orange {
+#courses .tasks .task .blue,
+#courses .tasks .task .purple,
+#courses .tasks .task .orange {
   text-transform: uppercase;
   padding-bottom: 5px;
 }
 
-#courses .tasks ul li .gray {
+#courses .tasks .task .gray {
   color: #bdbdbd;
 }
 
-#courses .tasks ul li a {
+#courses .tasks .task a {
   text-decoration: none;
   color: black;
   padding-right: 10px;
 }
 
-#courses .tasks ul li h3 {
+#courses .tasks .task h3 {
   text-align: center;
   padding-right: 10px;
   border-right: #bdbdbd solid 1px;
 }
 
-#courses .tasks ul li p {
-  font-size: 1rem;
+#courses .tasks .table_headers {
+  margin: 1.2rem;
+  color: #713fdb;
+  text-transform: uppercase;
+  font-size: 12px;
 }
 
-#courses .tasks ul li + li {
-  margin-top: 1rem;
-}
-
-#courses .grades {
-  width: auto;
-  border-radius: 20px;
-  background-color: #fefefe;
-}
-
-#courses .grades .grade {
+#courses .tasks .table_headers ul {
   display: -ms-grid;
   display: grid;
-  -ms-grid-columns: 2fr 3fr 1fr;
-      grid-template-columns: 2fr 3fr 1fr;
-  padding: 1rem;
-}
-
-#courses .grades .grade a {
-  text-decoration: none;
-  color: #bdbdbd;
-}
-
-#courses .grades .hidden {
-  display: none;
+  -ms-grid-columns: 1fr 3fr 2fr 2fr 2fr 2fr;
+      grid-template-columns: 1fr 3fr 2fr 2fr 2fr 2fr;
+  border-radius: 20px;
+  font-family: "Outfit", sans-serif;
+  padding: 0 1.2rem;
+  margin: 1rem;
+  gap: 1rem;
 }
 
 #courses .modal-window {
@@ -1096,11 +1112,15 @@ button.disabled,
 
 #login .login_modal .login_flex div {
   padding: 0.5rem 0;
+}
+
+#login .login_modal .login_flex div.active {
   border-bottom: 1px solid #712afc;
 }
 
 #login .login_modal .login_flex div h4 {
   font-size: 1rem;
+  cursor: pointer;
 }
 
 #login .login_modal form {
@@ -1476,13 +1496,22 @@ button.disabled,
   color: #bdbdbd;
 }
 
-#announcements #aPost {
-  width: 100%;
+#announcements .aTeacher .classes label {
+  font-weight: 200;
+}
+
+#announcements .aTeacher #aPost {
+  min-width: 100%;
   height: 100px;
   border-radius: 20px;
   padding: 1rem;
   margin: 1rem 0;
   border: #bdbdbd solid 1px;
+  font-family: "Outfit", sans-serif;
+}
+
+#announcements .header {
+  margin: 0 3rem;
 }
 
 #announcements button {
@@ -1538,14 +1567,15 @@ button.disabled,
 
 #announcements .announcement .aTeacher h4 {
   color: #969696;
-  margin-bottom: .5rem;
+  margin-bottom: 0.5rem;
 }
 
 #announcements .announcement .aTeacher #class {
   margin-right: 1rem;
 }
 
-#announcements .announcement .aTeacher label, #announcements .announcement .aTeacher input {
+#announcements .announcement .aTeacher label,
+#announcements .announcement .aTeacher input {
   font-family: "Outfit", sans-serif;
 }
 
@@ -1580,6 +1610,91 @@ button.disabled,
   font-weight: lighter;
   padding: 1rem;
   width: 100%;
+}
+
+#project .teacherProject {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-flow: column;
+          flex-flow: column;
+}
+
+#project .teacherProject .pName {
+  border-radius: 20px;
+  border: #bdbdbd solid 1px;
+  padding: 1rem;
+}
+
+#project .teacherProject textarea {
+  min-width: 100%;
+  height: 100px;
+  border-radius: 20px;
+  padding: 1rem;
+  margin: 1rem 0;
+  border: #bdbdbd solid 1px;
+  font-family: "Outfit", sans-serif;
+}
+
+#project .teacherProject .slider {
+  float: right;
+  width: 80px;
+  height: 26px;
+  margin-bottom: 1rem;
+  position: relative;
+  border-radius: 20px;
+  border: #713fdb solid 1px;
+}
+
+#project .teacherProject .slider:after {
+  content: 'OFF';
+  color: #000;
+  position: absolute;
+  right: 10px;
+  z-index: 0;
+  font: 12px/26px Arial, sans-serif;
+  font-family: "Outfit", sans-serif;
+  font-weight: bold;
+}
+
+#project .teacherProject .slider:before {
+  content: 'ON';
+  color: #713fdb;
+  position: absolute;
+  left: 10px;
+  z-index: 0;
+  font: 12px/26px Arial, sans-serif;
+  font-family: "Outfit", sans-serif;
+  font-weight: bold;
+}
+
+#project .teacherProject .slider label {
+  display: block;
+  width: 34px;
+  height: 22px;
+  cursor: pointer;
+  position: absolute;
+  top: 1px;
+  left: 1px;
+  z-index: 1;
+  background: #713fdb;
+  border-radius: 20px;
+  -webkit-transition: all 0.4s ease;
+  transition: all 0.4s ease;
+  -webkit-box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+          box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+  -webkit-box-shadow: 0px 2px 5px 0px rgba(0, 0, 0, 0.3);
+          box-shadow: 0px 2px 5px 0px rgba(0, 0, 0, 0.3);
+}
+
+#project .teacherProject .slider input[type=checkbox] {
+  visibility: hidden;
+}
+
+#project .teacherProject .slider input[type=checkbox]:checked + label {
+  left: 43px;
 }
 
 #project .projects {
