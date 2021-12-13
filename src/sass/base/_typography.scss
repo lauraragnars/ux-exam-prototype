@@ -46,3 +46,17 @@ p {
 td {
   font-family: $font-family;
 }
+
+a {
+  font-family: $font-family;
+  font-weight: 200;
+  font-size: 1rem;
+  color: $color-purple;
+  text-decoration: underline;
+}
+
+.task_link {
+  font-size: 0.8rem;
+  color: $color-purple;
+  text-decoration: underline;
+}

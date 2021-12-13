@@ -8,18 +8,30 @@
   </head>
   <body id="project">
     <div class="container participants_container">
+      <p class="toggle-menu">☰</p>
+      <div class="menu_container hide">
+        <nav class="menu">
+          <div class="menu_top">
+            <img src="./assets/icons/logo.svg" alt="Icon" />
+          </div>
+          <ul class="menuitems">
+            <li><img src="./assets/icons/outline/home.svg" alt="Icon" /><a href="dashboard.html">Dashboard</a></li>
+            <li class="selected"><img src="./assets/icons/filled/category.svg" alt="Icon" /><a href="courses.html">Courses</a></li>
+            <li><img src="./assets/icons/outline/chart.svg" alt="Icon" /><a href="plans.html">Plans</a></li>
+            <li><img src="./assets/icons/outline/calendar.svg" alt="Icon" /><a href="calendar.html">Calendar</a></li>
+            <li><img src="./assets/icons/outline/infosquare.svg" alt="Icon" /><a href="announcements.html">Announcements</a></li>
+            <li><img src="./assets/icons/outline/paper.svg" alt="Icon" /><a href="messages.html">Messages</a></li>
+          </ul>
+          <div class="menu_bottom">
+            <img src="./assets/icons/outline/logout.svg" alt="Icon" />
+            <a href="index.html">Logout</a>
+          </div>
+        </nav>
+      </div>
       <div class="content_container">
         <div class="top_navbar">
-          <img
-            class="bell"
-            src="./assets/icons/notification.svg"
-            alt="Notification bell"
-          />
-          <img
-            class="photo"
-            src="./assets/profilepicture.png"
-            alt="Profile picture"
-          />
+          <img class="bell" src="./assets/icons/notification.svg" alt="Notification bell" />
+          <img class="photo" src="./assets/profilepicture.png" alt="Profile picture" />
           <p>Anna Smith</p>
         </div>
 
@@ -29,49 +41,31 @@
               <div class="subsection project">
                 <h1>Project name</h1>
                 <div class="pDescription">
-                  <p>
-                    The First Mandatory Assignment will be developed in groups
-                    of 4 students.It will consist in:
-                  </p>
-                <ul>
-                  <li>
-                    Deliveringto Fronter the exercises related to each phase
-                    of Goal-Directed Design(except for the research phase),
-                    whichthe group will apply to the website idea of their
-                    choice.
-                  </li>
-                  <li>
-                    Presenting the whole process to the rest of the class.
-                  </li>
-                </ul>
+                  <p>The First Mandatory Assignment will be developed in groups of 4 students.It will consist in:</p>
+                  <ul>
+                    <li>
+                      Deliveringto Fronter the exercises related to each phase of Goal-Directed Design(except for the research phase), whichthe group will apply to the website idea of their choice.
+                    </li>
+                    <li>Presenting the whole process to the rest of the class.</li>
+                  </ul>
 
                   <h5>Business situation</h5>
-                  <p>
-                    Each group of students is a new web development startup.
-                  </p>
+                  <p>Each group of students is a new web development startup.</p>
                   <h5>Problem statement overview</h5>
-                  <p>
-                    Competitor websites have pain points that prevent users from
-                    experiencing 100% satisfaction(these pain points should be
-                    identified).
-                  </p>
+                  <p>Competitor websites have pain points that prevent users from experiencing 100% satisfaction(these pain points should be identified).</p>
                   <h5>Vision statement overview</h5>
-                  <p>
-                    The startup will become one of the world’s top three
-                    providers in their subject area within three years.
-                  </p>
+                  <p>The startup will become one of the world’s top three providers in their subject area within three years.</p>
                 </div>
                 <div class="pDocuments">
                   <p>Documents</p>
                 </div>
               </div>
               <div class="subsection project">
-                  <h2>Hand-in</h2>
-                  <input type="file" id="file">
-                  <input type="text" id="pComment" placeholder="Write a comment">
-                  <button id="editBtn" class="hidden">Edit</button>
-                  <button class="" id="handin-btn">Hand in</button>
-                
+                <h2>Hand-in</h2>
+                <input type="file" id="file" />
+                <input type="text" id="pComment" placeholder="Write a comment" />
+                <button id="editBtn" class="hidden">Edit</button>
+                <button class="" id="handin-btn">Hand in</button>
               </div>
             </div>
           </div>
