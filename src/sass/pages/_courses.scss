@@ -337,6 +337,7 @@
     .exams {
       ul {
         li {
+          display: grid;
           grid-template-columns: 1fr 3fr 2fr 2fr 2fr 2fr;
           gap: 1rem;
           margin-bottom: 1.5rem;
