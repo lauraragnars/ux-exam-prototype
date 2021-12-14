@@ -1,65 +1,69 @@
 @import "../base/variables";
 
-
 #dashboard {
-
-    .header {
-        margin: 1rem 3rem 0;
+  .header {
+    margin: 6rem 1rem 0 1rem;
+    @media (min-width: 700px) {
+      margin: 7rem 3rem 0 3rem;
     }
-
-    .subheader {
-        margin-top: 2rem;
+    @media (min-width: 1100px) {
+      margin: 5rem 3rem 0 3rem;
     }
-  
-    .subsection {
-        background-color: $color-off-white;
-        box-shadow: $box-shadow;
+  }
+
+  .subheader {
+    margin-top: 2rem;
+  }
+
+  .subsection {
+    background-color: $color-off-white;
+    box-shadow: $box-shadow;
+    border-radius: $border-radius;
+    min-width: 200px;
+    max-width: 100%;
+    min-height: 200px;
+    margin: 1.5rem 0;
+  }
+
+  .tasks {
+    ul {
+      padding: 1.2rem;
+
+      li {
+        background-color: $color-blue-tint;
         border-radius: $border-radius;
-        min-width: 200px;
-        max-width: 100%;
-        min-height: 200px;
-        margin: 1.5rem 0;
-    }
-
-    .tasks {
-        ul {
-            padding: 1.2rem;
-
-            li {
-                background-color: $color-blue-tint;
-                border-radius: $border-radius;
-                font-family: $font-family;
-                padding: 1rem;
-                display: flex;
-                justify-content: space-between;
-                align-items: center;
-
-                p {
-                    font-size: 1rem;
-                }
-
-                & + li {
-                    margin-top: 1rem;
-                }
-            }
-        }
-    }
-
-    .courses {
+        font-family: $font-family;
+        padding: 1rem;
         display: flex;
-        gap: 1rem;
-        flex-wrap: wrap;
+        justify-content: space-between;
+        align-items: center;
 
-        h3 {
-            flex-basis: 100%;
+        p {
+          font-size: 1rem;
         }
 
-        .course {
-            background-color: $color-purple-tint;
-            height: 200px;
-            min-width: 200px;
-            padding: 1.5rem;
-            border-radius: $border-radius;
+        & + li {
+          margin-top: 1rem;
         }
+      }
     }
+  }
+
+  .courses {
+    display: flex;
+    gap: 1rem;
+    flex-wrap: wrap;
+
+    h3 {
+      flex-basis: 100%;
+    }
+
+    .course {
+      background-color: $color-purple-tint;
+      height: 200px;
+      min-width: 200px;
+      padding: 1.5rem;
+      border-radius: $border-radius;
+    }
+  }
 }

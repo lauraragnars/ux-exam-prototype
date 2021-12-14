@@ -3,6 +3,13 @@
     display: flex;
     justify-content: center;
     align-items: center;
+    margin: 6rem 0 0 0rem;
+    @media (min-width: 700px) {
+      margin: 7rem 0 0 0rem;
+    }
+    @media (min-width: 1100px) {
+      margin: 5rem 0 0 0rem;
+    }
   }
   #cal {
     width: 100%;
