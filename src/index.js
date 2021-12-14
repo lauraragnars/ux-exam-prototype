@@ -4,7 +4,7 @@ window.addEventListener("DOMContentLoaded", start);
 
 function start() {
   const mainContainer = document.querySelector(".container");
-  const editProfileStudent = `
+  const editProfile = `
   <div class="edit_profile_container">
   <div class="edit_profile_box">
     <div class="close_edit_profile">
@@ -30,34 +30,9 @@ function start() {
     </form>
   </div>
 </div>`;
-  const editProfileTeacher = `
-  <div class="edit_profile_container">
-  <div class="edit_profile_box">
-    <div class="close_edit_profile">
-      <p>X</p>
-    </div>
-    <div class="form_profile">
-      <img class="photo" src="./assets/profilepicture.png" alt="Profile picture" />
-      <h3>Albert Johnson</h3>
-    </div>
-    <form id="update_user_form">
-      <label for="update_username">First Name: </label><br />
-      <input type="text" name="update_username" placeholder="Albert" /><br />
-      <label for="update_user_lastName">Last Name: </label><br />
-      <input type="text" name="update_user_lastName" placeholder="Johnson" /><br />
-      <label for="update_user_email">Email: </label><br />
-      <input type="text" name="update_user_email" placeholder="albert@johnson.is" /><br />
-      <label for="update_user_phonenumber">Phonenumber: </label><br />
-      <input type="text" name="update_user_phonenumber" placeholder="12345678" /><br />
-      <label for="update_user_password">Password: </label><br />
-      <input type="password" name="update_user_password" placeholder="hallohallohallo" /><br />
 
-      <button class="update_button">Update Profile Info</button>
-    </form>
-  </div>
-</div>`;
-  mainContainer.insertAdjacentHTML("afterbegin", editProfileStudent);
-  mainContainer.insertAdjacentHTML("afterbegin", editProfileTeacher);
+  mainContainer.insertAdjacentHTML("afterbegin", editProfile);
+
   document.querySelector(".toggle-menu").addEventListener("click", toggleMenu);
   document.querySelector(".edit_profile_container").style.display = "none";
   document.querySelector(".edit_profile_button").addEventListener("click", openEditProfile);
