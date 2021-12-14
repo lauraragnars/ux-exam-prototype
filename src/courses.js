@@ -2,12 +2,16 @@
 
 window.addEventListener("DOMContentLoaded", start);
 let submenuItems = document.querySelectorAll("#courses .submenu_item");
+let projectArrows = document.querySelectorAll(".projectarrow img");
+let projectsDetails = document.querySelectorAll(".bottom");
+console.log("projectDetails", projectsDetails);
 
 function start() {
   let allDropdownItems = document.querySelectorAll("#courses .dropdown_item");
-  console.log("allDropdownItems", allDropdownItems);
 
-  console.log("submenuItems", submenuItems);
+  projectArrows.forEach((arrow) => {
+    arrow.addEventListener("click", openTab);
+  });
   submenuItems.forEach((item) => {
     item.addEventListener("click", submenu);
   });
@@ -87,5 +91,20 @@ function submenu() {
     submenuItems[2].classList.add("underline");
     submenuItems[0].classList.remove("underline");
     submenuItems[1].classList.remove("underline");
+  }
+}
+
+function openTab() {
+  console.log("openTab");
+
+  if (this === projectArrows[0]) {
+    projectArrows[0].classList.toggle("flip");
+    projectsDetails[0].classList.toggle("hidden");
+  } else if (this === projectArrows[1]) {
+    projectArrows[1].classList.toggle("flip");
+    projectsDetails[1].classList.toggle("hidden");
+  } else if (this === projectArrows[2]) {
+    projectArrows[2].classList.toggle("flip");
+    projectsDetails[2].classList.toggle("hidden");
   }
 }

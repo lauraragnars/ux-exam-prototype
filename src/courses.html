@@ -77,7 +77,127 @@
               <li class="submenu_item">Exams</li>
             </ul>
           </div>
-          <div class="projects_container">
+          <div class="projects_container mobile_container">
+            <div class="projects">
+              <ul>
+                <li class="project mobile ux">
+                  <div class="top">
+                    <div>
+                      <h3>
+                        <span>13.</span>
+                        <br />
+                        Sept
+                      </h3>
+                    </div>
+                    <div>
+                      <p class="blue">User experience</p>
+                      <h4>GDD 4 Framework Exercise</h4>
+                    </div>
+                    <div class="downarrow projectarrow">
+                      <img src="assets/icons/arrow.svg" alt="projectarrow" />
+                    </div>
+                  </div>
+                  <div class="bottom hidden">
+                    <div class="mobile_headers">
+                      <div>Hand-in status</div>
+                      <div>Feedback</div>
+                      <div>Grade</div>
+                    </div>
+                    <div class="results">
+                      <div class="handin_status">
+                        <p>Completed</p>
+                      </div>
+                      <div>
+                        <p>Available</p>
+                      </div>
+                      <div><p>Passed</p></div>
+                    </div>
+
+                    <div class="go_to_project_button">
+                      <a href="project.html"><button>Go to project</button></a>
+                    </div>
+                  </div>
+                </li>
+                <li class="project mobile db">
+                  <div class="top">
+                    <div>
+                      <h3>
+                        <span>15.</span>
+                        <br />
+                        Sept
+                      </h3>
+                    </div>
+                    <div>
+                      <p class="orange">Databases</p>
+                      <h4>MongoDB Exercise</h4>
+                    </div>
+                    <div class="downarrow projectarrow">
+                      <img src="assets/icons/arrow.svg" alt="projectarrow" />
+                    </div>
+                  </div>
+                  <div class="bottom hidden">
+                    <div class="mobile_headers">
+                      <div>Hand-in status</div>
+                      <div>Feedback</div>
+                      <div>Grade</div>
+                    </div>
+                    <div class="results">
+                      <div class="handin_status">
+                        <p>Completed</p>
+                      </div>
+                      <div>
+                        <p>Available</p>
+                      </div>
+                      <div><p>Passed</p></div>
+                    </div>
+
+                    <div class="go_to_project_button">
+                      <a href="project.html"><button>Go to project</button></a>
+                    </div>
+                  </div>
+                </li>
+                <li class="project mobile wd">
+                  <div class="top">
+                    <div>
+                      <h3>
+                        <span>15.</span>
+                        <br />
+                        Sept
+                      </h3>
+                    </div>
+                    <div>
+                      <p class="purple">Web Development</p>
+                      <h4>PHP Project 2</h4>
+                    </div>
+                    <div class="downarrow projectarrow">
+                      <img src="assets/icons/arrow.svg" alt="projectarrow" />
+                    </div>
+                  </div>
+                  <div class="bottom hidden">
+                    <div class="mobile_headers">
+                      <div>Hand-in status</div>
+                      <div>Feedback</div>
+                      <div>Grade</div>
+                    </div>
+                    <div class="results">
+                      <div class="handin_status">
+                        <p>Completed</p>
+                      </div>
+                      <div>
+                        <p>Available</p>
+                      </div>
+                      <div><p>Passed</p></div>
+                    </div>
+
+                    <div class="go_to_project_button">
+                      <a href="project.html"><button>Go to project</button></a>
+                    </div>
+                  </div>
+                </li>
+              </ul>
+            </div>
+          </div>
+          <div class="projects_container desktop_container">
             <div class="noTasks hidden">
               <h3>You have no tasks</h3>
               <h4>Select a course to see more tasks</h4>
@@ -113,7 +233,7 @@
                     <p>Available</p>
                   </div>
                   <div><p>Passed</p></div>
-                  <div>
+                  <div class="go_to_project_button">
                     <a href="project.html"><button>Go to project</button></a>
                   </div>
                 </li>
@@ -137,7 +257,7 @@
                     <p>Available</p>
                   </div>
                   <div><p>Passed</p></div>
-                  <div>
+                  <div class="go_to_project_button">
                     <button>Go to project</button>
                   </div>
                 </li>
@@ -161,7 +281,7 @@
                     <p>Not Available</p>
                   </div>
                   <div><p>Not Available</p></div>
-                  <div>
+                  <div class="go_to_project_button">
                     <button>Go to project</button>
                   </div>
                 </li>
@@ -354,5 +474,24 @@
 
     <script src="index.js"></script>
     <script src="courses.js"></script>
+    <script>
+      let mobileCourses = document.querySelector(".mobile_container");
+      let desktopCourses = document.querySelector(".desktop_container");
+
+      function mediaQuery(x) {
+        if (x.matches) {
+          mobileCourses.style.display = "none";
+          desktopCourses.style.display = "unset";
+          console.log("desktop & ipad size");
+        } else {
+          desktopCourses.style.display = "none";
+          mobileCourses.style.display = "unset";
+          console.log("mobile size");
+        }
+      }
+      var x = window.matchMedia("(min-width: 767px)");
+      mediaQuery(x);
+      x.addListener(mediaQuery);
+    </script>
   </body>
 </html>
