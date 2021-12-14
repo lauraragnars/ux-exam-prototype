@@ -28,6 +28,8 @@ function start() {
   //   </div>`;
   // menuContainer.insertAdjacentHTML("afterbegin", menu);
   document.querySelector(".toggle-menu").addEventListener("click", toggleMenu);
+  document.querySelector(".edit_profile_container").style.display = "none";
+  document.querySelector(".edit_profile_button").addEventListener("click", openEditProfile);
 }
 
 function toggleMenu() {
@@ -46,6 +48,14 @@ function toggleMenu() {
     menu.classList.remove("hide");
     menu.classList.add("show");
   }
+}
+
+function openEditProfile() {
+  console.log("openEditProfile");
+  document.querySelector(".edit_profile_container").style.display = "flex";
+  document.querySelector(".close_edit_profile").addEventListener("click", () => {
+    document.querySelector(".edit_profile_container").style.display = "none";
+  });
 }
 
 const student = document.getElementById("student");

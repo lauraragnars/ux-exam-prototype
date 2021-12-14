@@ -31,8 +31,10 @@
       <div class="content_container">
         <div class="top_navbar">
           <img class="bell" src="./assets/icons/notification.svg" alt="Notification bell" />
-          <img class="photo" src="./assets/profilepicture.png" alt="Profile picture" />
-          <p>Anna Smith</p>
+          <div class="edit_profile_button">
+            <img class="photo" src="./assets/profilepicture.png" alt="Profile picture" />
+            <p>Anna Smith</p>
+          </div>
         </div>
 
         <div class="content">
@@ -166,6 +168,31 @@
             </div>
           </div>
         </div>
+      </div>
+    </div>
+    <div class="edit_profile_container">
+      <div class="edit_profile_box">
+        <div class="close_edit_profile">
+          <p>X</p>
+        </div>
+        <div class="form_profile">
+          <img class="photo" src="./assets/profilepicture.png" alt="Profile picture" />
+          <h3>Anna Smith</h3>
+        </div>
+        <form id="update_user_form">
+          <label for="update_username">First Name: </label><br />
+          <input type="text" name="update_username" placeholder="Sabrina" /><br />
+          <label for="update_user_lastName">Last Name: </label><br />
+          <input type="text" name="update_user_lastName" value="Last Name" /><br />
+          <label for="update_user_email">Email: </label><br />
+          <input type="text" name="update_user_email" value="sabrina@sabrina.is" /><br />
+          <label for="update_user_phonenumber">Phonenumber: </label><br />
+          <input type="text" name="update_user_phonenumber" value="12345678" /><br />
+          <label for="update_user_password">Password: </label><br />
+          <input type="password" name="update_user_password" value="hallohallohallo" /><br />
+
+          <button class="update_button">Update Profile Info</button>
+        </form>
       </div>
     </div>
     <script src="index.js"></script>
