@@ -3,30 +3,34 @@
 window.addEventListener("DOMContentLoaded", start);
 
 function start() {
-  // const menuContainer = document.querySelector(".container");
-  // const menu = `
-  //   <p class="toggle-menu">☰</p>
-  //   <div class="menu_container hide">
-  //       <nav class="menu">
-  //           <div class="menu_top">
-  //               <img src="./assets/icons/logo.svg" alt="Icon">
-  //           </div>
-  //           <ul class="menuitems">
-  //           <li class="selected"><img src="./assets/icons/filled/home.svg" alt="Icon"><a href="dashboard.html">Dashboard</a></li>
-  //           <li><img src="./assets/icons/outline/chart.svg" alt="Icon"><a href="plans.html">Plans</a></li>
-  //           <li><img src="./assets/icons/outline/chart.svg" alt="Icon"><a href="tasks.html">Tasks</a></li>
-  //           <li><img src="./assets/icons/outline/category.svg" alt="Icon"><a href="courses.html">Courses</a></li>
-  //           <li><img src="./assets/icons/outline/calendar.svg" alt="Icon"><a href="calendar.html">Calendar</a></li>
-  //           <li><img src="./assets/icons/outline/infosquare.svg" alt="Icon"><a href="announcements.html">Announcements</a></li>
-  //           <li><img src="./assets/icons/outline/paper.svg" alt="Icon"><a href="messages.html">Messages</a></li>
-  //           </ul>
-  //           <div class="menu_bottom">
-  //               <img src="./assets/icons/outline/logout.svg" alt="Icon">
-  //               <a href="index.html">Logout</a>
-  //           </div>
-  //       </nav>
-  //   </div>`;
-  // menuContainer.insertAdjacentHTML("afterbegin", menu);
+  const mainContainer = document.querySelector(".container");
+  const editProfile = `
+  <div class="edit_profile_container">
+  <div class="edit_profile_box">
+    <div class="close_edit_profile">
+      <p>X</p>
+    </div>
+    <div class="form_profile">
+      <img class="photo" src="./assets/profilepicture.png" alt="Profile picture" />
+      <h3>Anna Smith</h3>
+    </div>
+    <form id="update_user_form">
+      <label for="update_username">First Name: </label><br />
+      <input type="text" name="update_username" placeholder="Sabrina" /><br />
+      <label for="update_user_lastName">Last Name: </label><br />
+      <input type="text" name="update_user_lastName" value="Last Name" /><br />
+      <label for="update_user_email">Email: </label><br />
+      <input type="text" name="update_user_email" value="sabrina@sabrina.is" /><br />
+      <label for="update_user_phonenumber">Phonenumber: </label><br />
+      <input type="text" name="update_user_phonenumber" value="12345678" /><br />
+      <label for="update_user_password">Password: </label><br />
+      <input type="password" name="update_user_password" value="hallohallohallo" /><br />
+
+      <button class="update_button">Update Profile Info</button>
+    </form>
+  </div>
+</div>`;
+  mainContainer.insertAdjacentHTML("afterbegin", editProfile);
   document.querySelector(".toggle-menu").addEventListener("click", toggleMenu);
   document.querySelector(".edit_profile_container").style.display = "none";
   document.querySelector(".edit_profile_button").addEventListener("click", openEditProfile);
