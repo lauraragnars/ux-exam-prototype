@@ -73,20 +73,23 @@ function submenu() {
   if (this === submenuItems[0]) {
     document.querySelector(".tasks_container").classList.add("hidden");
     document.querySelector(".exams_container").classList.add("hidden");
-    document.querySelector(".projects_container").classList.remove("hidden");
+    document.querySelector(".desktop_container").classList.remove("hidden");
+    document.querySelector(".mobile_container").classList.remove("hidden");
     submenuItems[0].classList.add("underline");
     submenuItems[1].classList.remove("underline");
     submenuItems[2].classList.remove("underline");
   } else if (this === submenuItems[1]) {
     document.querySelector(".tasks_container").classList.remove("hidden");
-    document.querySelector(".projects_container").classList.add("hidden");
+    document.querySelector(".desktop_container").classList.add("hidden");
+    document.querySelector(".mobile_container").classList.add("hidden");
     document.querySelector(".exams_container").classList.add("hidden");
     submenuItems[1].classList.add("underline");
     submenuItems[0].classList.remove("underline");
     submenuItems[2].classList.remove("underline");
   } else if (this === submenuItems[2]) {
     document.querySelector(".exams_container").classList.remove("hidden");
-    document.querySelector(".projects_container").classList.add("hidden");
+    document.querySelector(".desktop_container").classList.add("hidden");
+    document.querySelector(".mobile_container").classList.add("hidden");
     document.querySelector(".tasks_container").classList.add("hidden");
     submenuItems[2].classList.add("underline");
     submenuItems[0].classList.remove("underline");

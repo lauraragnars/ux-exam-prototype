@@ -362,6 +362,7 @@
     .projects {
       ul {
         li {
+          display: grid;
           grid-template-columns: 1fr 4fr 1fr;
           gap: 1rem;
           margin-bottom: 1.5rem;
