@@ -5,6 +5,10 @@
 .teacherProject{
   display: flex;
   flex-flow: column;
+  label {
+    font-weight: 200;
+    font-family: $font-family;
+  }
   .pName{
     border-radius: $border-radius;
     border: $color-medium-gray solid 1px;
@@ -12,6 +16,7 @@
   }
   textarea{
     min-width: 100%;
+    max-width: 100px;
     height: 100px;
     border-radius: $border-radius;
     padding: 1rem;

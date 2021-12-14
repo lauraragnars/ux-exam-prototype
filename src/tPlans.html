@@ -15,12 +15,30 @@
             <img src="./assets/icons/logo.svg" alt="Icon" />
           </div>
           <ul class="menuitems">
-            <li><img src="./assets/icons/outline/home.svg" alt="Icon" /><a href="tDashboard.html">Dashboard</a></li>
-            <li><img src="./assets/icons/outline/category.svg" alt="Icon" /><a href="tCourses.html">Courses</a></li>
-            <li class="selected"><img src="./assets/icons/filled/chart.svg" alt="Icon" /><a href="tPlans.html">Plans</a></li>
-            <li><img src="./assets/icons/outline/calendar.svg" alt="Icon" /><a href="tCalendar.html">Calendar</a></li>
-            <li><img src="./assets/icons/outline/infosquare.svg" alt="Icon" /><a href="tAnnouncements.html">Announcements</a></li>
-            <li><img src="./assets/icons/outline/paper.svg" alt="Icon" /><a href="tMessages.html">Messages</a></li>
+            <li>
+              <img src="./assets/icons/outline/home.svg" alt="Icon" />
+              <a href="tDashboard.html">Dashboard</a>
+            </li>
+            <li>
+              <img src="./assets/icons/outline/category.svg" alt="Icon" />
+              <a href="tCourses.html">Courses</a>
+            </li>
+            <li class="selected">
+              <img src="./assets/icons/filled/chart.svg" alt="Icon" />
+              <a href="tPlans.html">Plans</a>
+            </li>
+            <li>
+              <img src="./assets/icons/outline/calendar.svg" alt="Icon" />
+              <a href="tCalendar.html">Calendar</a>
+            </li>
+            <li>
+              <img src="./assets/icons/outline/infosquare.svg" alt="Icon" />
+              <a href="tAnnouncements.html">Announcements</a>
+            </li>
+            <li>
+              <img src="./assets/icons/outline/paper.svg" alt="Icon" />
+              <a href="tMessages.html">Messages</a>
+            </li>
           </ul>
           <div class="menu_bottom">
             <img src="./assets/icons/outline/logout.svg" alt="Icon" />
@@ -30,8 +48,16 @@
       </div>
       <div class="content_container">
         <div class="top_navbar">
-          <img class="bell" src="./assets/icons/notification.svg" alt="Notification bell" />
-          <img class="photo" src="./assets/profilepicture.png" alt="Profile picture" />
+          <img
+            class="bell"
+            src="./assets/icons/notification.svg"
+            alt="Notification bell"
+          />
+          <img
+            class="photo"
+            src="./assets/profilepicture.png"
+            alt="Profile picture"
+          />
           <p>Anna Smith</p>
         </div>
         <div class="wrapper">
@@ -39,12 +65,27 @@
           <div class="submenu">
             <ul class="submenu_items">
               <li data-course="ux" class="ux_menu submenu_item">UX</li>
-              <li data-course="wd" class="wd_menu submenu_item disabled">Web Development</li>
-              <li data-course="db" class="db_menu submenu_item disabled">Databases</li>
+              <li data-course="wd" class="wd_menu submenu_item disabled">
+                Web Development
+              </li>
+              <li data-course="db" class="db_menu submenu_item disabled">
+                Databases
+              </li>
             </ul>
           </div>
+          <div class="teacherPlan">
+            <button id="editPlans">Edit</button>
+            
+            <input class="hidden" type="file" id="file" />
+            <button class="hidden" id="updatePlan">Update</button>
+          </div>
           <div class="semesterplan">
-            <svg viewBox="0 0 1400 900" fill="none" xmlns="http://www.w3.org/2000/svg">
+            
+            <svg
+              viewBox="0 0 1400 900"
+              fill="none"
+              xmlns="http://www.w3.org/2000/svg"
+            >
               <use href="av-assets/semesterplan.svg#semesterplan"></use>
             </svg>
           </div>
