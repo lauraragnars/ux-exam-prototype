@@ -24,7 +24,10 @@
   position: fixed;
   transition: 0.3s;
   top: 1.5rem;
-  left: 1.5rem;
+  left: 1rem;
+  @media (min-width: 767px) {
+    left: 3rem;
+  }
   z-index: 9000;
   height: 2rem;
   width: 2rem;
@@ -215,6 +218,8 @@
     width: 100%;
     height: 100%;
     position: fixed;
+    top: 0;
+    left: 0;
     z-index: 1000;
 
     @media (min-width: 900px) {
@@ -255,6 +260,10 @@
       display: flex;
       align-items: center;
       gap: 0.5rem;
+      padding-right: 1rem;
+      @media (min-width: 767px) {
+        padding-right: 3rem;
+      }
     }
 
     .top_navbar {
@@ -264,11 +273,11 @@
       align-items: center;
       height: 10vh;
       padding: 20px;
-      padding-right: 2rem;
       gap: 1rem;
       position: fixed;
       top: 0;
       right: 0;
+
       background-color: $color-off-white;
 
       .bell {
@@ -276,7 +285,10 @@
       }
 
       .photo {
-        width: 2.5rem;
+        width: 2rem;
+        @media (min-width: 767px) {
+          width: 2.5rem;
+        }
       }
 
       p {

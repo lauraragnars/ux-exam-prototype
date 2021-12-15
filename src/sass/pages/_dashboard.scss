@@ -1,6 +1,10 @@
 @import "../base/variables";
 
 #dashboard {
+  .see_all_tasks_button,
+  .see_all_projects_button {
+    padding-top: 20px;
+  }
   .header {
     margin: 6rem 1rem 0 1rem;
     @media (min-width: 700px) {
@@ -48,9 +52,11 @@
       }
     }
   }
+
   .upcoming_projects,
   .upcoming_tasks {
     margin-top: 1rem;
+
     .top {
       display: grid;
       grid-template-columns: 1fr 4fr 1fr;
@@ -117,10 +123,24 @@
       }
     }
   }
-  .announcements {
-    display: flex;
-    flex-flow: column;
-    gap: 1rem;
+
+  .inner_container {
+    padding: 0;
+    margin: 0rem 1rem 1rem 1rem;
+    @media (min-width: 700px) {
+      margin: 0rem 3rem 0 3rem;
+    }
+    @media (min-width: 1100px) {
+      margin: 0rem 3rem 0 3rem;
+    }
+    .column_wide {
+      flex-basis: 500px;
+      flex-grow: 2;
+    }
+    .column_narrow {
+      flex-basis: 250px;
+      flex-grow: 1;
+    }
   }
   .announcement {
     display: flex;
@@ -156,28 +176,12 @@
     .aFlex {
       display: flex;
       gap: 1rem;
+      align-items: center;
     }
 
     img {
       height: 60px;
       width: auto;
-    }
-    .aComments {
-      display: none;
-    }
-    .aComment {
-      margin: 1rem;
-      .photo {
-        height: 40px;
-      }
-      input {
-        border-radius: $border-radius;
-        border: $color-medium-gray solid 1px;
-        font-family: $font-family;
-        font-weight: lighter;
-        padding: 1rem;
-        width: 100%;
-      }
     }
   }
 }
