@@ -3,6 +3,9 @@
 // All courses page
 
 #courses {
+ h1{
+   margin-top:1rem;
+ }
   //TEACHER ONLY
   .newBtn {
     cursor: pointer;
@@ -15,7 +18,7 @@
 
     @media (min-width: 700px) {
       right: 5rem;
-      top: 150px;
+      top: 100px;
     }
     &.examsBtn {
       right: 3rem;

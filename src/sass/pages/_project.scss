@@ -1,14 +1,159 @@
-@import "../base/variables";
-
+@import '../base/variables';
+h1{
+  margin-top: 1rem;
+}
 #project {
   // TEACHER ONLY
-
+  h1 {
+    margin-bottom: 1rem;
+  }
+  h3{
+    span{
+      font-weight: 100;
+      font-size: 1rem;
+      padding-left: .5rem;
+    }
+  }
+  .flex{
+    display: flex;
+    h4{
+      margin-top: .7rem;
+      margin-left: 1rem;
+    }
+  }
+  .photo {
+    height: 40px;
+    width: 40px;
+  }
+  #select {
+    display: flex;
+    width: 200px;
+    border-radius: $border-radius;
+    background-color: $color-purple;
+    font-family: $font-family;
+    color: $color-off-white;
+    padding: 0.5rem;
+    margin: 0 0 0 0;
+    justify-self: right;
+    align-self: flex-end;
+  }
+  .slider {
+    float: right;
+    width: 80px;
+    height: 26px;
+    margin-bottom: 1rem;
+    position: relative;
+    border-radius: $border-radius;
+    border: $color-purple solid 1px;
+    &:after {
+      content: 'OFF';
+      color: #000;
+      position: absolute;
+      right: 10px;
+      z-index: 0;
+      font: 12px/26px Arial, sans-serif;
+      font-family: $font-family;
+      font-weight: bold;
+    }
+    &:before {
+      content: 'ON';
+      color: $color-purple;
+      position: absolute;
+      left: 10px;
+      z-index: 0;
+      font: 12px/26px Arial, sans-serif;
+      font-family: $font-family;
+      font-weight: bold;
+    }
+    label {
+      display: block;
+      width: 34px;
+      height: 22px;
+      cursor: pointer;
+      position: absolute;
+      top: 1px;
+      left: 1px;
+      z-index: 1;
+      background: $color-purple;
+      border-radius: $border-radius;
+      transition: all 0.4s ease;
+      box-shadow: $box-shadow;
+      box-shadow: 0px 2px 5px 0px rgba(0, 0, 0, 0.3);
+    }
+    input[type='checkbox'] {
+      visibility: hidden;
+      &:checked + label {
+        left: 43px;
+      }
+    }
+  }
+  #create {
+    margin-top: 1rem;
+    @media (min-width: 900px) {
+      width: 200px;
+    }
+  }
   .teacherProject {
     display: flex;
     flex-flow: column;
+    margin-bottom: 1rem;
+
     label {
       font-weight: 200;
       font-family: $font-family;
+    }
+    .flex {
+      display: flex;
+      justify-content: space-between;
+      gap: 1rem;
+      @media (min-width: 600px){
+        padding-right: 5rem;
+      }
+      @media (min-width: 900px){
+        justify-content:unset;
+        gap: 6rem;
+      }
+    }
+    .deadlines {
+      display: flex;
+      flex-flow: column;
+      .deadline {
+        width: 200px;
+        border-radius: $border-radius;
+        border: $color-medium-gray solid 1px;
+        padding: 0.5rem;
+        margin: 0.2rem 0;
+      }
+      h4 {
+        color: $color-gray;
+        margin-bottom: 0.5rem;
+        font-size: 1rem;
+      }
+      label {
+        margin: 0.5rem 0;
+      }
+    }
+    .classes {
+      display: flex;
+      flex-flow: column;
+      @media (min-width: 1230px) {
+        display: block;
+        // margin: 1rem 0;
+        .class {
+          font-size: 1rem;
+          margin-right: 1rem;
+        }
+        h4 {
+          font-size: 1rem;
+        }
+      }
+      h4 {
+        color: $color-gray;
+        margin: 0 0 0.5rem;
+      }
+      .search{
+        margin-top: 1rem;
+      }
     }
     .pName {
       border-radius: $border-radius;
@@ -25,57 +170,20 @@
       border: $color-medium-gray solid 1px;
       font-family: $font-family;
     }
-
-    .slider {
-      float: right;
-      width: 80px;
-      height: 26px;
-      margin-bottom: 1rem;
-      position: relative;
+    .studSearch {
       border-radius: $border-radius;
-      border: $color-purple solid 1px;
-      &:after {
-        content: "OFF";
-        color: #000;
-        position: absolute;
-        right: 10px;
-        z-index: 0;
-        font: 12px/26px Arial, sans-serif;
-        font-family: $font-family;
-        font-weight: bold;
-      }
-      &:before {
-        content: "ON";
-        color: $color-purple;
-        position: absolute;
-        left: 10px;
-        z-index: 0;
-        font: 12px/26px Arial, sans-serif;
-        font-family: $font-family;
-        font-weight: bold;
-      }
-      label {
-        display: block;
-        width: 34px;
-        height: 22px;
-        cursor: pointer;
-        position: absolute;
-        top: 1px;
-        left: 1px;
-        z-index: 1;
-        background: $color-purple;
-        border-radius: $border-radius;
-        transition: all 0.4s ease;
-        box-shadow: $box-shadow;
-        box-shadow: 0px 2px 5px 0px rgba(0, 0, 0, 0.3);
-      }
-      input[type="checkbox"] {
-        visibility: hidden;
-        &:checked + label {
-          left: 43px;
-        }
-      }
+      border: $color-medium-gray solid 1px;
+      padding: 0.5rem;
+      max-width: 200px;
+      margin-bottom: 1rem;
     }
+  }
+  .files {
+    display: flex;
+    flex-flow: column;
+    gap: 1rem;
+    margin: 1rem 0;
+   
   }
 
   // STUDENTS

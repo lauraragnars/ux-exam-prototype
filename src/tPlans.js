@@ -1,11 +1,11 @@
 "use strict";
 
 window.addEventListener("DOMContentLoaded", start);
-// const updateBtn = document.getElementById("updatePlan");
-// const editBtn = document.getElementById("editPlans");
+const updateBtn = document.getElementById("updatePlan");
+const editBtn = document.getElementById("editPlans");
 function start() {
-  // updateBtn.addEventListener("click", update);
-  // editBtn.addEventListener("click", edit);
+  updateBtn.addEventListener("click", update);
+  editBtn.addEventListener("click", edit);
   let allButtons = document.querySelectorAll("#plans .submenu_item");
   console.log("allButtons", allButtons);
   // let allTabs = document.querySelectorAll(".tab");
@@ -30,17 +30,17 @@ function start() {
   }
 }
 
-// function update() {
-//   updateBtn.classList.add("hidden");
-//   editBtn.classList.remove("hidden");
-//   if (updateBtn.classList.contains("hidden")) {
-//     document.getElementById("file").classList.add("hidden");
-//   }
-// }
-// function edit() {
-//   updateBtn.classList.remove("hidden");
-//   editBtn.classList.add("hidden");
-//   if (editBtn.classList.contains("hidden")) {
-//     document.getElementById("file").classList.remove("hidden");
-//   }
-// }
+function update() {
+  updateBtn.classList.add("hidden");
+  editBtn.classList.remove("hidden");
+  if (updateBtn.classList.contains("hidden")) {
+    document.getElementById("file").classList.add("hidden");
+  }
+}
+function edit() {
+  updateBtn.classList.remove("hidden");
+  editBtn.classList.add("hidden");
+  if (editBtn.classList.contains("hidden")) {
+    document.getElementById("file").classList.remove("hidden");
+  }
+}
