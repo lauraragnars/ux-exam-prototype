@@ -15,12 +15,12 @@
             <img src="./assets/icons/logo.svg" alt="Icon" />
           </div>
           <ul class="menuitems">
-            <li><img src="./assets/icons/outline/home.svg" alt="Icon" /><a href="dashboard.html">Dashboard</a></li>
-            <li class="selected"><img src="./assets/icons/filled/category.svg" alt="Icon" /><a href="courses.html">Courses</a></li>
-            <li><img src="./assets/icons/outline/chart.svg" alt="Icon" /><a href="plans.html">Plans</a></li>
-            <li><img src="./assets/icons/outline/calendar.svg" alt="Icon" /><a href="calendar.html">Calendar</a></li>
-            <li><img src="./assets/icons/outline/infosquare.svg" alt="Icon" /><a href="announcements.html">Announcements</a></li>
-            <li><img src="./assets/icons/outline/paper.svg" alt="Icon" /><a href="messages.html">Messages</a></li>
+            <li><img src="./assets/icons/outline/home.svg" alt="Icon" /><a href="tDashboard.html">Dashboard</a></li>
+            <li class="selected"><img src="./assets/icons/filled/category.svg" alt="Icon" /><a href="tCourses.html">Courses</a></li>
+            <li><img src="./assets/icons/outline/chart.svg" alt="Icon" /><a href="tPlans.html">Plans</a></li>
+            <li><img src="./assets/icons/outline/calendar.svg" alt="Icon" /><a href="tCalendar.html">Calendar</a></li>
+            <li><img src="./assets/icons/outline/infosquare.svg" alt="Icon" /><a href="tAnnouncements.html">Announcements</a></li>
+            <li><img src="./assets/icons/outline/paper.svg" alt="Icon" /><a href="tMessages.html">Messages</a></li>
           </ul>
           <div class="menu_bottom">
             <img src="./assets/icons/outline/logout.svg" alt="Icon" />
@@ -32,8 +32,8 @@
         <div class="top_navbar">
           <img class="bell" src="./assets/icons/notification.svg" alt="Notification bell" />
           <div class="edit_profile_button">
-            <img class="photo" src="./assets/profilepicture.png" alt="Profile picture" />
-            <p>Sabrina Smith</p>
+            <img class="photo" src="./assets/albert.png" alt="Profile picture" />
+            <p>Albert Johnson</p>
           </div>
         </div>
 
@@ -59,19 +59,23 @@
                   <p>The startup will become one of the world’s top three providers in their subject area within three years.</p>
                 </div>
                 <div class="pDocuments">
-                  <h5>Documents</h5>
-                  <a href="./directory/yourfile.pdf" download="MaterialExample">Material.example.pdf</a>
-
+                    <h5>Documents</h5>
+                    <a href="./directory/yourfile.pdf" download="MaterialExample">Material.example.pdf</a>
                 </div>
               </div>
               <div class="subsection project">
                 <h2>Hand-in</h2>
-                <!-- <h5>Add group members</h5>
-                <input type="text" class="groupHandin" placeholder="Search for your groupmembers"> -->
-                <input type="file" id="file" />
-                <input type="text" id="pComment" placeholder="Write a comment" />
-                <button id="editBtn" class="hidden">Edit</button>
-                <button class="" id="handin-btn">Hand in</button>
+                <h5>Student: Hannah Brown</h5>
+                <!-- <h4>Documents from student/s:</h4> -->
+                <a href="./directory/yourfile.pdf" download="ProjectFromStudent">Hand-in.example.pdf</a>
+                <textarea disabled rows="1" placeholder="Example of a comment from student" id="commentEx"></textarea>
+                <h3>Grade and feedback</h3>
+                <label for="grade" class="grade">
+                    Grade: 
+                    <input type="text" placeholder="10" id="grade">
+                </label>
+                <textarea rows="1" placeholder="Write a feedback for student here" id="feedbackEx"></textarea>
+                <a href="./tProject2.html"><button>Finish</button></a>
               </div>
             </div>
           </div>

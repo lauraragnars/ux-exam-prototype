@@ -20,6 +20,42 @@ h1{
       margin-top: .7rem;
       margin-left: 1rem;
     }
+    .flexCol{
+      display: flex;
+      gap: 2rem;
+   a{
+     padding-top: .7rem;
+     font-size: .8rem;
+   }
+    }
+  }
+  .grade{
+    font-size: 1rem;
+
+    #grade{
+      border-radius: $border-radius;
+      border: $color-medium-gray solid 1px;
+      font-family: $font-family;
+      font-weight: lighter;
+      padding: .8rem;
+   width: 50px;
+    text-align: center;
+    margin-left: .5rem;
+    font-size: 1rem;
+    }
+  }
+  #commentEx, #feedbackEx{
+    min-width: 100%;
+    height: 100px;
+    border-radius: $border-radius;
+    padding: 1rem;
+    font-style: italic;
+    font-weight: 100;
+    // border: $color-medium-gray solid 1px;
+    font-family: $font-family;
+  }
+  #feedbackEx{
+    border: $color-medium-gray solid 1px;
   }
   .photo {
     height: 40px;
@@ -196,6 +232,14 @@ h1{
     @media (min-width: 1100px) {
       margin: 5rem 3rem;
     }
+  }
+  .groupHandin{
+    border-radius: $border-radius;
+    border: $color-medium-gray solid 1px;
+    font-family: $font-family;
+    font-weight: lighter;
+    padding: .5rem 1rem;
+    width: 250px;
   }
   .projects {
     display: flex;
