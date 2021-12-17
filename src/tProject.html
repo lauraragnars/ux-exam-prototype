@@ -53,75 +53,225 @@
             src="./assets/icons/notification.svg"
             alt="Notification bell"
           />
-          <img
-            class="photo"
-            src="./assets/profilepicture.png"
-            alt="Profile picture"
-          />
-          <p>Anna Smith</p>
+          <img class="photo" src="./assets/albert.png" alt="Profile picture" />
+          <p>Albert Johnson</p>
         </div>
 
         <div class="inner_container">
           <div class="column column_wide">
             <div class="section projects">
               <div class="subsection project">
-                <form class="teacherProject">
-                  <div class="firstRow">
-                    <h1>New Project</h1>
-                  
-                  <section title=".slider">
-                    <div class="slider">
-                      <input
-                        type="checkbox"
-                        value="None"
-                        id="slider"
-                        name="check"
-                        checked
-                      />
-                      <label for="slider"></label>
+                <label for="select"></label>
+                <select id="select">
+                  <option value="project1">Project</option>
+                  <option value="task">Task</option>
+                  <option value="exam">Exam</option>
+                </select>
+                <section title=".slider">
+                  <div class="slider">
+                    <input
+                      type="checkbox"
+                      value="None"
+                      id="slider"
+                      name="check"
+                      checked
+                    />
+                    <label for="slider"></label>
+                  </div>
+                </section>
+                <div id="1">
+                  <form class="teacherProject">
+                    <div class="firstRow">
+                      <h1 id="project1">New Project</h1>
+                      <h1 id="task" class="hidden">New Task</h1>
+                      <h1 id="exam" class="hidden">New Exam</h1>
                     </div>
-                  </section>
-                
-                  <!-- <label for="">Project name</label> -->
-                  <input
-                    type="text"
-                    name=""
-                    class="pName"
-                    placeholder="Project name"
-                  />
-                  <textarea
-                    name=""
-                    id=""
-                    cols="30"
-                    rows="10"
-                    placeholder=""
-                  ></textarea>
-                  <h4>What classes to include:</h4>
-                  <label id="class">
-                    <input type="checkbox" />
-                    User Experience
-                  </label>
-                  <label id="class">
-                    <input type="checkbox" />
-                    Databases
-                  </label>
-                  <label id="class">
-                    <input type="checkbox" />
-                    Web Development Semester
-                  </label>
-                </form>
+
+                    <!-- <label for="">Project name</label> -->
+                    <input
+                      id="project1"
+                      type="text"
+                      class="pName"
+                      placeholder="Project name"
+                    />
+                    <textarea
+                      cols="30"
+                      rows="10"
+                      placeholder="Describe your project"
+                    ></textarea>
+                    <div class="flex">
+                      <div class="deadlines">
+                        <h4>Deadline</h4>
+                        <input
+                          type="date"
+                          name="deadline"
+                          value="2021-12-31"
+                          class="deadline"
+                        />
+                        <input
+                          type="time"
+                          name="time"
+                          value="23:59"
+                          class="deadline"
+                        />
+                        <label for="deadline">
+                          <input type="checkbox" />
+                          No deadline
+                        </label>
+                      </div>
+                      
+                      <div class="classes">
+                       
+                          <h4>Add documents</h4>
+                          <div class="files">
+                            <input type="file" id="file" />
+                            <input type="file" id="file" />
+                          </div>
+                        
+                        <h4>What classes to include:</h4>
+                        <label class="class">
+                          <input type="checkbox" />
+                          User Experience
+                        </label>
+                        <label class="class">
+                          <input type="checkbox" />
+                          Databases
+                        </label>
+                        <label class="class">
+                          <input type="checkbox" />
+                          Web Development
+                        </label>
+                      </div>
+                    </div>
+                  </form>
+
+                  <button id="create">Create</button>
+                </div>
+
+                <!-- TASK -->
+                <div id="2" class="hidden">
+                  <form class="teacherProject">
+                    <div class="firstRow">
+                      <h1 id="project1">New Task</h1>
+                    </div>
+
+                    <!-- <label for="">Project name</label> -->
+                    <input
+                      id="project1"
+                      type="text"
+                      class="pName"
+                      placeholder="Task name"
+                    />
+                    <textarea
+                      cols="30"
+                      rows="10"
+                      placeholder="Describe task"
+                    ></textarea>
+                    <div class="flex">
+                      <div class="deadlines">
+                        <h4>Deadline</h4>
+                        <input
+                          type="date"
+                          name="deadline"
+                          value="2021-12-31"
+                          class="deadline"
+                        />
+                        <input
+                          type="time"
+                          name="time"
+                          value="23:59"
+                          class="deadline"
+                        />
+                        <label for="deadline">
+                          <input type="checkbox" />
+                          No deadline
+                        </label>
+                      </div>
+                      <div class="classes">
+                        <h4>What classes to include:</h4>
+                        <label class="class">
+                          <input type="checkbox" />
+                          User Experience
+                        </label>
+                        <label class="class">
+                          <input type="checkbox" />
+                          Databases
+                        </label>
+                        <label class="class">
+                          <input type="checkbox" />
+                          Web Development
+                        </label>
+                      </div>
+                    </div>
+                  </form>
+
+                  <button id="create">Create</button>
+                </div>
+
+                <!-- EXAM -->
+                <div id="3" class="hidden">
+                  <form class="teacherProject">
+                    <div class="firstRow">
+                      <h1 id="project1">New Exam</h1>
+                    </div>
+
+                    <!-- <label for="">Project name</label> -->
+                    <input
+                      id="project1"
+                      type="text"
+                      class="pName"
+                      placeholder="Exam name"
+                    />
+                    <textarea
+                      cols="30"
+                      rows="10"
+                      placeholder="Describe Exam"
+                    ></textarea>
+                    <div class="flex">
+                      <div class="deadlines">
+                        <h4>Timeslot</h4>
+                        <input
+                          type="date"
+                          name="deadline"
+                          value="2021-12-31"
+                          class="deadline"
+                        />
+                        <input
+                          type="time"
+                          name="time"
+                          value="23:59"
+                          class="deadline"
+                        />
+                      </div>
+                      <div class="classes">
+                        <h4>What classes to include:</h4>
+                        <label class="class">
+                          <input type="checkbox" />
+                          User Experience
+                        </label>
+                        <label class="class">
+                          <input type="checkbox" />
+                          Databases
+                        </label>
+                        <label class="class">
+                          <input type="checkbox" />
+                          Web Development
+                        </label>
+                        <h4 class="search">Search for students</h4>
+                        <input type="text" class="studSearch" />
+                      </div>
+                    </div>
+                  </form>
+
+                  <button id="create">Create</button>
+                </div>
               </div>
-              
-                <h2>Add documents</h2>
-                <input type="file" id="file" />
-                <button class="" id="create">Create</button>
-              
             </div>
           </div>
         </div>
       </div>
     </div>
     <script src="index.js"></script>
-    <script src="project.js"></script>
+    <script src="tProject.js"></script>
   </body>
 </html>

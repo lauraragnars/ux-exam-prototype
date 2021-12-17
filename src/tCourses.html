@@ -7,7 +7,7 @@
     <title>UX - Prototype</title>
   </head>
   <body id="courses">
-    <div id="open-task-modal" class="modal-window">
+    <!-- <div id="open-task-modal" class="modal-window">
       <div>
         <a href="#" title="Close" class="modal-close">Close</a>
         <h3>Assignment</h3>
@@ -22,7 +22,7 @@
         <h4>Project name</h4>
         <p>VERY good job! Just remember to use the variables ALL the time :P</p>
       </div>
-    </div>
+    </div> -->
     <div class="container courses_container">
       <p class="toggle-menu">☰</p>
       <div class="menu_container hide">
@@ -47,8 +47,10 @@
       <div class="content_container">
         <div class="top_navbar">
           <img class="bell" src="./assets/icons/notification.svg" alt="Notification bell" />
-          <img class="photo" src="./assets/profilepicture.png" alt="Profile picture" />
-          <p>Anna Smith</p>
+          <div class="edit_profile_button">
+            <img class="photo" src="./assets/albert.png" alt="Profile picture" />
+            <p>Albert Johnson</p>
+          </div>
         </div>
         <div class="wrapper">
           <h1>Courses</h1>
@@ -75,21 +77,141 @@
               <li class="submenu_item">Exams</li>
             </ul>
           </div>
-          <div class="projects_container">
+          
+          <div class="projects_container mobile_container">
+            <div class="projects">
+              <a href="tProject.html"><button class="newBtn">+</button></a>
+              <ul>
+                <li class="project mobile ux">
+                  <div class="top">
+                    <div>
+                      <h3>
+                        <span>13.</span>
+                        <br />
+                        Sept
+                      </h3>
+                    </div>
+                    <div>
+                      <p class="blue">User experience</p>
+                      <h4>GDD 4 Framework Exercise</h4>
+                    </div>
+                    <div class="downarrow projectarrow">
+                      <img src="assets/icons/arrow.svg" alt="projectarrow" />
+                    </div>
+                  </div>
+                  <div class="bottom hidden">
+                    <div class="mobile_headers">
+                      <div>Hand-in status</div>
+                      <div>Feedback</div>
+                      <div>Grade</div>
+                    </div>
+                    <div class="results">
+                      <div class="handin_status">
+                        <p>Completed</p>
+                      </div>
+                      <div>
+                        <p>Available</p>
+                      </div>
+                      <div><p>Passed</p></div>
+                    </div>
+
+                    <div class="go_to_project_button">
+                      <a href="project.html"><button>Go to project</button></a>
+                    </div>
+                  </div>
+                </li>
+                <li class="project mobile db">
+                  <div class="top">
+                    <div>
+                      <h3>
+                        <span>15.</span>
+                        <br />
+                        Sept
+                      </h3>
+                    </div>
+                    <div>
+                      <p class="orange">Databases</p>
+                      <h4>MongoDB Exercise</h4>
+                    </div>
+                    <div class="downarrow projectarrow">
+                      <img src="assets/icons/arrow.svg" alt="projectarrow" />
+                    </div>
+                  </div>
+                  <div class="bottom hidden">
+                    <div class="mobile_headers">
+                      <div>Hand-in status</div>
+                      <div>Feedback</div>
+                      <div>Grade</div>
+                    </div>
+                    <div class="results">
+                      <div class="handin_status">
+                        <p>Completed</p>
+                      </div>
+                      <div>
+                        <p>Available</p>
+                      </div>
+                      <div><p>Passed</p></div>
+                    </div>
+
+                    <div class="go_to_project_button">
+                      <a href="project.html"><button>Go to project</button></a>
+                    </div>
+                  </div>
+                </li>
+                <li class="project mobile wd">
+                  <div class="top">
+                    <div>
+                      <h3>
+                        <span>15.</span>
+                        <br />
+                        Sept
+                      </h3>
+                    </div>
+                    <div>
+                      <p class="purple">Web Development</p>
+                      <h4>PHP Project 2</h4>
+                    </div>
+                    <div class="downarrow projectarrow">
+                      <img src="assets/icons/arrow.svg" alt="projectarrow" />
+                    </div>
+                  </div>
+                  <div class="bottom hidden">
+                    <div class="mobile_headers">
+                      <div>Hand-in status</div>
+                      <div>Feedback</div>
+                      <div>Grade</div>
+                    </div>
+                    <div class="results">
+                      <div class="handin_status">
+                        <p>Completed</p>
+                      </div>
+                      <div>
+                        <p>Available</p>
+                      </div>
+                      <div><p>Passed</p></div>
+                    </div>
+
+                    <div class="go_to_project_button">
+                      <a href="project.html"><button>Go to project</button></a>
+                    </div>
+                  </div>
+                </li>
+              </ul>
+            </div>
+          </div>
+          <div class="projects_container desktop_container">
             <div class="noTasks hidden">
               <h3>You have no tasks</h3>
               <h4>Select a course to see more tasks</h4>
             </div>
-            <a href="tProject.html"><button class="newBtn">+</button></a>
-
             <div class="table_headers">
+              <a href="tProject.html"><button class="newBtn">+</button></a>
               <ul>
                 <li>Dato</li>
                 <li>Project</li>
                 <li>Hand-in status</li>
                 <li>Feedback</li>
                 <li>Grade</li>
-                <!-- <a href="tProject.html"><button>New</button></a> -->
               </ul>
             </div>
             <div class="projects">
@@ -114,8 +236,8 @@
                     <p>Available</p>
                   </div>
                   <div><p>Passed</p></div>
-                  <div>
-                    <a href="tProject2.html"><button>Go to project</button></a>
+                  <div class="go_to_project_button">
+                    <a href="project.html"><button>Go to project</button></a>
                   </div>
                 </li>
                 <li class="project db">
@@ -138,7 +260,7 @@
                     <p>Available</p>
                   </div>
                   <div><p>Passed</p></div>
-                  <div>
+                  <div class="go_to_project_button">
                     <button>Go to project</button>
                   </div>
                 </li>
@@ -162,7 +284,7 @@
                     <p>Not Available</p>
                   </div>
                   <div><p>Not Available</p></div>
-                  <div>
+                  <div class="go_to_project_button">
                     <button>Go to project</button>
                   </div>
                 </li>
@@ -170,17 +292,20 @@
             </div>
           </div>
           <div class="tasks_container hidden">
+            <a href="tProject.html"><button class="newBtn">+</button></a>
             <div class="noTasks hidden">
               <h3>You have no tasks</h3>
               <h4>Select a course to see more tasks</h4>
             </div>
-            <a href="#"><button class="newBtn">+</button></a>
             <div class="table_headers">
+              
               <ul>
                 <li>Dato</li>
                 <li>Task</li>
                 <li>Content</li>
-                <!-- <a href="#"><button>New</button></a> -->
+                <li></li>
+                <li></li>
+                <li>Completed</li>
               </ul>
             </div>
             <div class="tasks">
@@ -200,15 +325,13 @@
                   <div>
                     <h4><a class="task_link" href="#">GDD Article</a></h4>
                   </div>
-
-                  <!-- <div class="handin_status">
+                  <div></div>
+                  <div></div>
+                  <div class="handin_status">
                     <label class="switch">
                       <input type="checkbox" />
                       <span class="slider round"></span>
                     </label>
-                  </div> -->
-                  <div>
-                    <a href="#">25/50</a>
                   </div>
                 </li>
                 <li class="task db">
@@ -226,14 +349,13 @@
                   <div>
                     <p>Read chapters 1-3 in 7 Databases in 7 Weeks</p>
                   </div>
-                  <!-- <div class="handin_status">
+                  <div></div>
+                  <div></div>
+                  <div class="handin_status">
                     <label class="switch">
                       <input type="checkbox" />
                       <span class="slider round"></span>
                     </label>
-                  </div> -->
-                  <div>
-                    <a href="#">15/50</a>
                   </div>
                 </li>
                 <li class="task wd">
@@ -251,14 +373,13 @@
                   <div>
                     <a class="task_link">LinkedIn Learning course in PHP</a>
                   </div>
-                  <!-- <div class="handin_status">
+                  <div></div>
+                  <div></div>
+                  <div class="handin_status">
                     <label class="switch">
                       <input type="checkbox" />
                       <span class="slider round"></span>
                     </label>
-                  </div> -->
-                  <div>
-                    <a href="#">35/50</a>
                   </div>
                 </li>
               </ul>
@@ -269,6 +390,7 @@
               <h3>You have no tasks</h3>
               <h4>Select a course to see more tasks</h4>
             </div>
+            <a href="tProject.html"><button class="newBtn">+</button></a>
             <div class="table_headers">
               <ul>
                 <li>Dato</li>
@@ -278,8 +400,6 @@
                 <li>Location</li>
               </ul>
             </div>
-                        <a href="#"><button class="newBtn">+</button></a>
-z
             <div class="exams">
               <ul>
                 <li class="exam ux">
@@ -357,7 +477,27 @@ z
         </div>
       </div>
     </div>
+
     <script src="index.js"></script>
     <script src="courses.js"></script>
+    <script>
+      let mobileCourses = document.querySelector(".mobile_container");
+      let desktopCourses = document.querySelector(".desktop_container");
+
+      function mediaQuery(x) {
+        if (x.matches) {
+          mobileCourses.style.display = "none";
+          desktopCourses.style.display = "unset";
+          console.log("desktop & ipad size");
+        } else {
+          desktopCourses.style.display = "none";
+          mobileCourses.style.display = "unset";
+          console.log("mobile size");
+        }
+      }
+      var x = window.matchMedia("(min-width: 767px)");
+      mediaQuery(x);
+      x.addListener(mediaQuery);
+    </script>
   </body>
 </html>
